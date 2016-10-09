@@ -21,6 +21,8 @@
 		A9B31B041DA57DE900865377 /* AnimationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B31B031DA57DE900865377 /* AnimationEngine.swift */; };
 		A9B31B101DA5C0B200865377 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B31B0F1DA5C0B200865377 /* Card.swift */; };
 		A9B31B121DA5C0FA00865377 /* Card.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9B31B111DA5C0FA00865377 /* Card.xib */; };
+		A9FB60771DA820E90014A650 /* TaskListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FB60761DA820E90014A650 /* TaskListTableViewController.swift */; };
+		A9FB60791DA86A0B0014A650 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FB60781DA86A0B0014A650 /* TaskDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		A9B31B031DA57DE900865377 /* AnimationEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationEngine.swift; sourceTree = "<group>"; };
 		A9B31B0F1DA5C0B200865377 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		A9B31B111DA5C0FA00865377 /* Card.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card.xib; sourceTree = "<group>"; };
+		A9FB60761DA820E90014A650 /* TaskListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListTableViewController.swift; sourceTree = "<group>"; };
+		A9FB60781DA86A0B0014A650 /* TaskDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
 		D47651BD36F3609353451573 /* Pods-SwiftTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftTime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftTime/Pods-SwiftTime.debug.xcconfig"; sourceTree = "<group>"; };
 		E495DF20B284428E7058A036 /* Pods_SwiftTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -96,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				A9AFF9DA1DA2ADA9007F85BF /* ViewController.swift */,
+				A9FB60761DA820E90014A650 /* TaskListTableViewController.swift */,
+				A9FB60781DA86A0B0014A650 /* TaskDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -273,9 +279,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9FB60771DA820E90014A650 /* TaskListTableViewController.swift in Sources */,
 				A9A53ACF1DA6C80200FE7B15 /* test.m in Sources */,
 				A9559EC21DA6CD7500C17F57 /* TaskEntry.swift in Sources */,
 				A9B31AFF1DA5796500865377 /* CustomButton.swift in Sources */,
+				A9FB60791DA86A0B0014A650 /* TaskDetailViewController.swift in Sources */,
 				A9B31B101DA5C0B200865377 /* Card.swift in Sources */,
 				A9AFF9DB1DA2ADA9007F85BF /* ViewController.swift in Sources */,
 				A9AFF9D91DA2ADA9007F85BF /* AppDelegate.swift in Sources */,

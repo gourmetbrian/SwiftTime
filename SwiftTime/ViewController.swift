@@ -19,25 +19,25 @@ class ViewController: UIViewController {
     
     var timeCard: Card!
     
-    var userTextEntry: TaskEntry!
-    
     var currentState: TimerState!
     
     @IBOutlet weak var startButtonConstraint: NSLayoutConstraint!
 
-    var remainingTicks: Int = 0
     var timer: Timer?
+    
+    var remainingTicks: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.animEngine = AnimationEngine(constraints: [startButtonConstraint])
-        currentState = TimerState.STOPPED
+        currentState = TimerState.STOPPED        
         initialSetup()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         self.animEngine.animateOnScreen()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,11 +51,7 @@ class ViewController: UIViewController {
     
     func initialSetup()
     {
-        timeCard = Bundle.main.loadNibNamed("Card", owner: self, options: nil)?[0] as! Card!
-        timeCard.center = AnimationEngine.offScreenRightPosition
-        self.view.addSubview(timeCard)
         remainingTicks = kWorkTime
-        updateDisplay()
     }
     
     func updateDisplay()
@@ -72,23 +68,24 @@ class ViewController: UIViewController {
         if ((timer) != nil) {
             return
         }
-        startCountdown()
-        self.animEngine.animateToPosition(view: timeCard, position: AnimationEngine.screenCenterPosition, completion: { (anim:POPAnimation?, finished: Bool) -> Void
+        currentState = .RUNNING_TOMATO
+        timeCard = Bundle.main.loadNibNamed("Card", owner: self, options: nil)?[0] as! Card!
+        timeCard.center = AnimationEngine.offScreenRightPosition
+        self.view.addSubview(timeCard)
+        timeCard.countdownLabel.text = "Work!"
+        self.animEngine.animateToPosition(view: self.timeCard, position: AnimationEngine.screenCenterPosition, completion: { (anim:POPAnimation?, finished: Bool) -> Void
             in
-            self.animEngine.animateToPosition(view: self.startButton, position: AnimationEngine.offScreenLeftPosition, completion: { (anim:POPAnimation?, finished: Bool) -> Void
-                in
-                self.startButton.removeFromSuperview()
+            self.updateDisplay()
+            self.startCountdown()
             })
-            
-        })
     }
     
+    //MARK:- Timer Functions
     func startCountdown()
     {
         if (timer != nil) {
             return
         }
-        currentState = .RUNNING_TOMATO
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.decreaseTimer), userInfo: nil, repeats: true)
     }
     
@@ -108,12 +105,13 @@ class ViewController: UIViewController {
         }
     }
     
+    //MARK:- State Transitions
+    
     func transitionToBreak()
     {
         remainingTicks = kBreakTime
-       timeCard.countdownLabel.text = "Break!"
+        timeCard.countdownLabel.text = "Break!"
         currentState = TimerState.RUNNING_BREAK
-        //prompt user for text entry
         promptUserForTaskEntry()
     }
     
@@ -122,6 +120,9 @@ class ViewController: UIViewController {
         remainingTicks = kWorkTime
         currentState = TimerState.STOPPED
         updateDisplay()
+        self.animEngine.animateToPosition(view: self.timeCard, position: AnimationEngine.offScreenLeftPosition, completion: { (anim:POPAnimation?, finished: Bool) -> Void
+            in
+        })
     }
     
     func promptUserForTaskEntry()
@@ -131,14 +132,11 @@ class ViewController: UIViewController {
         let submitAction = UIAlertAction(title: "Submit", style: UIAlertActionStyle.default, handler: {
             alert -> Void in
             
-        let firstTextField = alertController.textFields![0] as UITextField
-        self.updateDisplay()
-        self.startCountdown()
-            alertController.dismiss(animated: true, completion: { 
-                
+            self.saveTask(taskToSave: (alertController.textFields?.first?.text)!)
+            self.updateDisplay()
+            self.startCountdown()
+            alertController.dismiss(animated: true, completion: {
             })
-
-            
         })
         
         alertController.addTextField { (textField : UITextField!) -> Void in
@@ -150,8 +148,14 @@ class ViewController: UIViewController {
 
 
     }
-
-
+    
+    func saveTask(taskToSave: String)
+    {
+        print("The task to save is \(taskToSave)")
+        let delegate : AppDelegate = AppDelegate().sharedInstance()
+        delegate.completedTomatoes.append(taskToSave)
+        delegate.saveTasks(completedTasks: delegate.completedTomatoes)
+    }
 
 }
 

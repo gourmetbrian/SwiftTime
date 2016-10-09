@@ -14,9 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     var animEngine: AnimationEngine!
+    
+    var completedTomatoes = [String]()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        completedTomatoes = getTasks()
+
         return true
     }
 
@@ -42,6 +47,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func sharedInstance() -> AppDelegate
+    {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
+    
+    func saveTasks(completedTasks: [String])
+    {
+        UserDefaults.standard.set(completedTasks, forKey: keyForSavedTasks)
+    }
+    
+    func getTasks() -> [String]
+    {
+        return (UserDefaults.standard.object(forKey: keyForSavedTasks) as! NSArray!) as! [String]
+    }
 
 
 }
