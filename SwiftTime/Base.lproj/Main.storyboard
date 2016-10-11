@@ -30,29 +30,205 @@
                                     <action selector="startTomatoPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eI0-eR-Keo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SkM-aQ-eFM">
-                                <frame key="frameInset" minY="611" width="74" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Tasks"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SkM-aQ-eFM" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="QF2-li-bp9"/>
+                                    <constraint firstAttribute="width" constant="47" id="W5f-jO-akf"/>
+                                </constraints>
+                                <state key="normal" title="Tasks" image="notepad"/>
                                 <connections>
                                     <segue destination="AA8-Fw-f6s" kind="show" id="Z3d-Kf-tYe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykK-Kj-MBH" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="ASm-FS-7cr"/>
+                                    <constraint firstAttribute="height" constant="46" id="iT3-ha-2xl"/>
+                                </constraints>
+                                <state key="normal" title="Settings" image="settings (1)"/>
+                                <connections>
+                                    <segue destination="n9z-Nd-2AE" kind="show" id="BfI-Iu-GpX"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SkM-aQ-eFM" secondAttribute="bottom" constant="7" id="EDM-iu-Yd2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ykK-Kj-MBH" secondAttribute="bottom" constant="8" id="SCs-Qs-S5l"/>
+                            <constraint firstItem="ykK-Kj-MBH" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="U7n-JF-LVY"/>
+                            <constraint firstItem="SkM-aQ-eFM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="avt-hc-a7w"/>
                             <constraint firstItem="1mP-Ok-J29" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fDY-iI-2YF"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1mP-Ok-J29" secondAttribute="bottom" constant="100" id="o6R-1O-eYd"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="goToSettingsBtn" destination="ykK-Kj-MBH" id="5Rj-wc-NTa"/>
+                        <outlet property="goToTaskListBtn" destination="SkM-aQ-eFM" id="ZGv-YI-tAc"/>
+                        <outlet property="settingsButtonConstraint" destination="U7n-JF-LVY" id="awj-jx-zyC"/>
                         <outlet property="startButton" destination="1mP-Ok-J29" id="qwQ-fc-Gzd"/>
                         <outlet property="startButtonConstraint" destination="fDY-iI-2YF" id="eHW-E0-UgX"/>
+                        <outlet property="taskButtonConstraint" destination="avt-hc-a7w" id="paK-AX-XOA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="RgO-BY-uTy">
+            <objects>
+                <viewController id="n9z-Nd-2AE" customClass="SettingsViewController" customModule="SwiftTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z8D-Yw-LaB"/>
+                        <viewControllerLayoutGuide type="bottom" id="w6i-4Q-MCw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fsS-le-yMT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5v-O6-DkG" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Hq5-fQ-5ab"/>
+                                    <constraint firstAttribute="width" constant="37" id="Yzn-bO-BFN"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="tomato-button"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Q5N-hI-WkK"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="25" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gWE-Pn-D7b">
+                                <color key="backgroundColor" red="0.25098039220000001" green="0.80784313730000001" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ttw-6B-BQ9"/>
+                                    <constraint firstAttribute="width" constant="192" id="XaC-m2-zca"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tomato Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tZ-iy-3uA">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="192" id="fvw-3K-iCh"/>
+                                    <constraint firstAttribute="height" constant="47" id="hFc-yc-SRa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound Effects" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYs-WI-zOM">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="NW4-zI-3fo"/>
+                                    <constraint firstAttribute="height" constant="47" id="b2U-N6-h40"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sX-Qz-x7D" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.25098039220000001" green="0.80784313730000001" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="ef7-GR-lz0"/>
+                                    <constraint firstAttribute="height" constant="66" id="tAt-hq-BJu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Turn Off"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRv-VM-puI" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.25098039220000001" green="0.80784313730000001" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="AH7-Zi-Ljf"/>
+                                    <constraint firstAttribute="width" constant="94" id="h0y-Um-cld"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Set"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="workTimeBtnPressed:" destination="n9z-Nd-2AE" eventType="touchUpInside" id="6wu-l4-AaE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Break Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBY-zt-7ZX">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="9FS-fH-Ffn"/>
+                                    <constraint firstAttribute="width" constant="192" id="WxA-Nj-GrR"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="47" id="kNU-Xa-nB5"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="192" id="qx2-xb-qvS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nyc-Zh-odd">
+                                <color key="backgroundColor" red="0.25098039220000001" green="0.80784313730000001" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="IVY-DQ-k9i"/>
+                                    <constraint firstAttribute="width" constant="192" id="nsN-z0-9Ma"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCY-XH-5h1" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.25098039220000001" green="0.80784313730000001" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Cwu-j4-FVs"/>
+                                    <constraint firstAttribute="width" constant="94" id="cdH-u1-bfk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Set"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="breakTimeBtnPressed:" destination="n9z-Nd-2AE" eventType="touchUpInside" id="io9-c4-tE1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iBY-zt-7ZX" firstAttribute="top" secondItem="vRv-VM-puI" secondAttribute="bottom" constant="30" id="5sj-IO-4Ea"/>
+                            <constraint firstItem="nyc-Zh-odd" firstAttribute="centerX" secondItem="fsS-le-yMT" secondAttribute="centerX" id="A5H-Wm-E1x"/>
+                            <constraint firstItem="P5v-O6-DkG" firstAttribute="top" secondItem="Z8D-Yw-LaB" secondAttribute="bottom" id="BSy-z2-DG8"/>
+                            <constraint firstItem="yYs-WI-zOM" firstAttribute="centerX" secondItem="fsS-le-yMT" secondAttribute="centerX" id="JVb-vk-mS5"/>
+                            <constraint firstItem="nyc-Zh-odd" firstAttribute="top" secondItem="iBY-zt-7ZX" secondAttribute="bottom" constant="30" id="NBS-rg-mN4"/>
+                            <constraint firstItem="gWE-Pn-D7b" firstAttribute="centerX" secondItem="fsS-le-yMT" secondAttribute="centerX" id="SIX-hF-mgU"/>
+                            <constraint firstItem="vRv-VM-puI" firstAttribute="top" secondItem="gWE-Pn-D7b" secondAttribute="bottom" constant="30" id="Sfb-qi-HHr"/>
+                            <constraint firstItem="vRv-VM-puI" firstAttribute="centerX" secondItem="fsS-le-yMT" secondAttribute="centerX" id="VAZ-L0-b6D"/>
+                            <constraint firstItem="8sX-Qz-x7D" firstAttribute="centerX" secondItem="fsS-le-yMT" secondAttribute="centerX" id="W3C-ii-25g"/>
+                            <constraint firstItem="UCY-XH-5h1" firstAttribute="top" secondItem="nyc-Zh-odd" secondAttribute="bottom" constant="30" id="Xrp-n8-5rv"/>
+                            <constraint firstItem="iBY-zt-7ZX" firstAttribute="centerX" secondItem="fsS-le-yMT" secondAttribute="centerX" id="a2k-xH-F3e"/>
+                            <constraint firstItem="P5v-O6-DkG" firstAttribute="leading" secondItem="fsS-le-yMT" secondAttribute="leadingMargin" id="eNL-vl-fJY"/>
+                            <constraint firstItem="8sX-Qz-x7D" firstAttribute="top" secondItem="yYs-WI-zOM" secondAttribute="bottom" constant="30" id="eVd-XB-dbc"/>
+                            <constraint firstItem="gWE-Pn-D7b" firstAttribute="top" secondItem="6tZ-iy-3uA" secondAttribute="bottom" constant="30" id="nEs-2g-PRV"/>
+                            <constraint firstItem="6tZ-iy-3uA" firstAttribute="centerX" secondItem="fsS-le-yMT" secondAttribute="centerX" id="p3L-nR-b2Q"/>
+                            <constraint firstItem="iBY-zt-7ZX" firstAttribute="top" secondItem="vRv-VM-puI" secondAttribute="bottom" constant="30" id="pop-Fz-wGk"/>
+                            <constraint firstItem="yYs-WI-zOM" firstAttribute="top" secondItem="UCY-XH-5h1" secondAttribute="bottom" constant="30" id="q5o-pf-ao1"/>
+                            <constraint firstItem="UCY-XH-5h1" firstAttribute="centerX" secondItem="fsS-le-yMT" secondAttribute="centerX" id="seO-QN-sYH"/>
+                            <constraint firstItem="6tZ-iy-3uA" firstAttribute="top" secondItem="Z8D-Yw-LaB" secondAttribute="bottom" constant="50" id="xZW-Bm-mNS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="breakTimeLabel" destination="nyc-Zh-odd" id="btz-37-MHS"/>
+                        <outlet property="setBreakTimeBtn" destination="UCY-XH-5h1" id="IbZ-TM-vtD"/>
+                        <outlet property="setWorkTimeBtn" destination="vRv-VM-puI" id="NsI-41-2gb"/>
+                        <outlet property="workTimeLabel" destination="gWE-Pn-D7b" id="SqJ-tr-Eiv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gau-wx-M1s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1122.4000000000001" y="258.62068965517244"/>
         </scene>
         <!--Task List Table View Controller-->
         <scene sceneID="xY5-lC-Eni">
@@ -75,7 +251,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MJF-2O-QkV" id="7Fb-8z-aYq">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <frame key="frameInset" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
@@ -88,7 +264,7 @@
                                     <outlet property="delegate" destination="AA8-Fw-f6s" id="J1p-wU-mRE"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1T-9t-cwC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1T-9t-cwC" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="O21-MU-NPc"/>
                                     <constraint firstAttribute="width" constant="37" id="kR1-52-xU0"/>
@@ -146,6 +322,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="notepad" width="512" height="512"/>
+        <image name="settings (1)" width="512" height="512"/>
         <image name="tomato-button" width="345" height="342"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Q5N-hI-WkK"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -16,9 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var animEngine: AnimationEngine!
     
     var completedTomatoes = [String]()
+    
+    var settings: Settings = Settings()
+    
+    var animationHasBeenShown: Bool = false
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //Something is going on below, the function that gets the array is going haywire
         
         completedTomatoes = getTasks()
 
@@ -59,7 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func getTasks() -> [String]
     {
-        return (UserDefaults.standard.object(forKey: keyForSavedTasks) as! NSArray!) as! [String]
+        return UserDefaults.standard.object(forKey: keyForSavedTasks) as? [String] ?? [String]()
     }
 
 

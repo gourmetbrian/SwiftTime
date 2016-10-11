@@ -10,6 +10,8 @@
 		8786A0D54D1EC14F8AB6E195 /* Pods_SwiftTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E495DF20B284428E7058A036 /* Pods_SwiftTime.framework */; };
 		A9559EC01DA6CD4F00C17F57 /* TaskEntry.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9559EBF1DA6CD4F00C17F57 /* TaskEntry.xib */; };
 		A9559EC21DA6CD7500C17F57 /* TaskEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9559EC11DA6CD7500C17F57 /* TaskEntry.swift */; };
+		A96842421DAD086F0085D7EC /* alarm.caf in Resources */ = {isa = PBXBuildFile; fileRef = A96842411DAD086F0085D7EC /* alarm.caf */; };
+		A96842441DAD087D0085D7EC /* tick.caf in Resources */ = {isa = PBXBuildFile; fileRef = A96842431DAD087D0085D7EC /* tick.caf */; };
 		A9A53ACF1DA6C80200FE7B15 /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A53ACE1DA6C80200FE7B15 /* test.m */; };
 		A9AFF9D91DA2ADA9007F85BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AFF9D81DA2ADA9007F85BF /* AppDelegate.swift */; };
 		A9AFF9DB1DA2ADA9007F85BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AFF9DA1DA2ADA9007F85BF /* ViewController.swift */; };
@@ -21,6 +23,8 @@
 		A9B31B041DA57DE900865377 /* AnimationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B31B031DA57DE900865377 /* AnimationEngine.swift */; };
 		A9B31B101DA5C0B200865377 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B31B0F1DA5C0B200865377 /* Card.swift */; };
 		A9B31B121DA5C0FA00865377 /* Card.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9B31B111DA5C0FA00865377 /* Card.xib */; };
+		A9EBF9131DAB2EEC00C37599 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EBF9121DAB2EEC00C37599 /* Settings.swift */; };
+		A9EBF9151DAB33DE00C37599 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EBF9141DAB33DE00C37599 /* SettingsViewController.swift */; };
 		A9FB60771DA820E90014A650 /* TaskListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FB60761DA820E90014A650 /* TaskListTableViewController.swift */; };
 		A9FB60791DA86A0B0014A650 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FB60781DA86A0B0014A650 /* TaskDetailViewController.swift */; };
 /* End PBXBuildFile section */
@@ -29,6 +33,8 @@
 		427830A766D0DDCAEC565E0A /* Pods-SwiftTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftTime/Pods-SwiftTime.release.xcconfig"; sourceTree = "<group>"; };
 		A9559EBF1DA6CD4F00C17F57 /* TaskEntry.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaskEntry.xib; sourceTree = "<group>"; };
 		A9559EC11DA6CD7500C17F57 /* TaskEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskEntry.swift; sourceTree = "<group>"; };
+		A96842411DAD086F0085D7EC /* alarm.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = alarm.caf; path = ../../../../../Desktop/alarm.caf; sourceTree = "<group>"; };
+		A96842431DAD087D0085D7EC /* tick.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = tick.caf; path = ../../../../../Desktop/tick.caf; sourceTree = "<group>"; };
 		A9A53ACD1DA6C80200FE7B15 /* SwiftTime-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftTime-Bridging-Header.h"; sourceTree = "<group>"; };
 		A9A53ACE1DA6C80200FE7B15 /* test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = "<group>"; };
 		A9AFF9D51DA2ADA9007F85BF /* SwiftTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +49,8 @@
 		A9B31B031DA57DE900865377 /* AnimationEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationEngine.swift; sourceTree = "<group>"; };
 		A9B31B0F1DA5C0B200865377 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		A9B31B111DA5C0FA00865377 /* Card.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card.xib; sourceTree = "<group>"; };
+		A9EBF9121DAB2EEC00C37599 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		A9EBF9141DAB33DE00C37599 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A9FB60761DA820E90014A650 /* TaskListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListTableViewController.swift; sourceTree = "<group>"; };
 		A9FB60781DA86A0B0014A650 /* TaskDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
 		D47651BD36F3609353451573 /* Pods-SwiftTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftTime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftTime/Pods-SwiftTime.debug.xcconfig"; sourceTree = "<group>"; };
@@ -61,6 +69,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A968423C1DACFEE80085D7EC /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				A96842431DAD087D0085D7EC /* tick.caf */,
+				A96842411DAD086F0085D7EC /* alarm.caf */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 		A9AFF9CC1DA2ADA9007F85BF = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +99,7 @@
 		A9AFF9D71DA2ADA9007F85BF /* SwiftTime */ = {
 			isa = PBXGroup;
 			children = (
+				A968423C1DACFEE80085D7EC /* Sounds */,
 				A9B31B131DA66CCD00865377 /* Util */,
 				A9B31B0E1DA5C09F00865377 /* View */,
 				A9B31AFC1DA5792F00865377 /* Models */,
@@ -102,6 +120,7 @@
 				A9AFF9DA1DA2ADA9007F85BF /* ViewController.swift */,
 				A9FB60761DA820E90014A650 /* TaskListTableViewController.swift */,
 				A9FB60781DA86A0B0014A650 /* TaskDetailViewController.swift */,
+				A9EBF9141DAB33DE00C37599 /* SettingsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -111,6 +130,7 @@
 			children = (
 				A9AFF9EA1DA2AFAB007F85BF /* Constants.swift */,
 				A9B31AFE1DA5796500865377 /* CustomButton.swift */,
+				A9EBF9121DAB2EEC00C37599 /* Settings.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -221,6 +241,8 @@
 				A9AFF9E01DA2ADA9007F85BF /* Assets.xcassets in Resources */,
 				A9AFF9DE1DA2ADA9007F85BF /* Main.storyboard in Resources */,
 				A9B31B121DA5C0FA00865377 /* Card.xib in Resources */,
+				A96842421DAD086F0085D7EC /* alarm.caf in Resources */,
+				A96842441DAD087D0085D7EC /* tick.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +310,9 @@
 				A9AFF9DB1DA2ADA9007F85BF /* ViewController.swift in Sources */,
 				A9AFF9D91DA2ADA9007F85BF /* AppDelegate.swift in Sources */,
 				A9B31B041DA57DE900865377 /* AnimationEngine.swift in Sources */,
+				A9EBF9131DAB2EEC00C37599 /* Settings.swift in Sources */,
 				A9AFF9EB1DA2AFAB007F85BF /* Constants.swift in Sources */,
+				A9EBF9151DAB33DE00C37599 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

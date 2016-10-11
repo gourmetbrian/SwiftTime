@@ -12,24 +12,19 @@
             <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What Did You Do?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIy-OQ-axL">
-                    <frame key="frameInset" minX="16" minY="54" width="218" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What Did You Do?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIy-OQ-axL">
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Processed reports..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bsE-VO-34x">
-                    <frame key="frameInset" minX="16" minY="122" width="218" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Processed reports..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bsE-VO-34x">
                     <color key="backgroundColor" red="0.25098039215686274" green="0.80784313725490198" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shh-xJ-uLT" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
-                    <frame key="frameInset" minX="44" minY="177" width="168" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shh-xJ-uLT" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
                     <state key="normal" title="Submit and Start Break"/>
                     <connections>
                         <action selector="submitBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="Qx4-4z-hoc"/>
@@ -38,7 +33,15 @@
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.72549019607843135" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="bsE-VO-34x" firstAttribute="leading" secondItem="zIy-OQ-axL" secondAttribute="leading" id="8Fp-Cm-cuB"/>
+                <constraint firstItem="shh-xJ-uLT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="44" id="CVW-Ep-knU"/>
+                <constraint firstItem="bsE-VO-34x" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="HTq-Hr-jZI"/>
+                <constraint firstItem="shh-xJ-uLT" firstAttribute="top" secondItem="bsE-VO-34x" secondAttribute="bottom" constant="25" id="L41-c7-S0X"/>
+                <constraint firstItem="bsE-VO-34x" firstAttribute="trailing" secondItem="zIy-OQ-axL" secondAttribute="trailing" id="ReL-Dz-elq"/>
+                <constraint firstItem="bsE-VO-34x" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="122" id="Wha-5W-z0z"/>
+                <constraint firstItem="bsE-VO-34x" firstAttribute="top" secondItem="zIy-OQ-axL" secondAttribute="bottom" constant="47" id="Ykp-sH-9Tt"/>
                 <constraint firstItem="bsE-VO-34x" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hqc-EJ-NUT"/>
+                <constraint firstAttribute="trailing" secondItem="shh-xJ-uLT" secondAttribute="trailing" constant="38" id="uyk-Zy-fYX"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>

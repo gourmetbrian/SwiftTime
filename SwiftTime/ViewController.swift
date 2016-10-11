@@ -8,12 +8,17 @@
 
 import UIKit
 import pop
+import AVFoundation
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var countdownDisplay: UILabel!
     
-    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var startButton: CustomButton!
+    
+    @IBOutlet weak var goToSettingsBtn: CustomButton!
+    
+    @IBOutlet weak var goToTaskListBtn: CustomButton!
     
     var animEngine: AnimationEngine!
     
@@ -21,37 +26,46 @@ class ViewController: UIViewController {
     
     var currentState: TimerState!
     
+    @IBOutlet weak var settingsButtonConstraint: NSLayoutConstraint!
+    
     @IBOutlet weak var startButtonConstraint: NSLayoutConstraint!
 
+    @IBOutlet weak var taskButtonConstraint: NSLayoutConstraint!
+    
     var timer: Timer?
     
     var remainingTicks: Int = 0
     
+    let tickPath = NSURL(fileURLWithPath: Bundle.main.path(forResource: "tick", ofType: "caf")!)
+    
+    let alarmPath = NSURL(fileURLWithPath: Bundle.main.path(forResource: "alarm", ofType: "caf")!)
+    
+    var player: AVAudioPlayer? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.animEngine = AnimationEngine(constraints: [startButtonConstraint])
+        self.animEngine = AnimationEngine(constraints: [startButtonConstraint, settingsButtonConstraint,taskButtonConstraint])
         currentState = TimerState.STOPPED        
         initialSetup()
+        
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.animEngine.animateOnScreen()
-
+        super.viewDidAppear(true)
+        animEngine.animateOnScreen()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-        self.animEngine = AnimationEngine(constraints: [startButtonConstraint])
-
     }
  
     //MARK:- Setup Funcs
     
     func initialSetup()
     {
-        remainingTicks = kWorkTime
+        remainingTicks = AppDelegate().sharedInstance().settings.userWorkTime
     }
     
     func updateDisplay()
@@ -65,9 +79,9 @@ class ViewController: UIViewController {
     
     @IBAction func startTomatoPressed(_ sender: AnyObject)
     {
-        if ((timer) != nil) {
-            return
-        }
+
+        if (currentState == .STOPPED ) {
+        remainingTicks = AppDelegate().sharedInstance().settings.userWorkTime
         currentState = .RUNNING_TOMATO
         timeCard = Bundle.main.loadNibNamed("Card", owner: self, options: nil)?[0] as! Card!
         timeCard.center = AnimationEngine.offScreenRightPosition
@@ -75,9 +89,18 @@ class ViewController: UIViewController {
         timeCard.countdownLabel.text = "Work!"
         self.animEngine.animateToPosition(view: self.timeCard, position: AnimationEngine.screenCenterPosition, completion: { (anim:POPAnimation?, finished: Bool) -> Void
             in
+            self.goToSettingsBtn.isEnabled = false
+            self.goToSettingsBtn.alpha = 0.4
+            self.goToTaskListBtn.isEnabled = false
+            self.goToTaskListBtn.alpha = 0.4
             self.updateDisplay()
             self.startCountdown()
             })
+        } else if (currentState == .RUNNING_TOMATO || currentState == .RUNNING_BREAK) {
+            timer?.invalidate()
+            timer = nil
+            transitionToStop()
+        }
     }
     
     //MARK:- Timer Functions
@@ -94,7 +117,12 @@ class ViewController: UIViewController {
         remainingTicks -= 1
         updateDisplay()
         
+        startButton.scaleAnimation()
+        playMyFile(fileToPlay: tickPath)
+
+        
         if (remainingTicks == 0) {
+            playMyFile(fileToPlay: alarmPath)
             timer?.invalidate()
             timer = nil
             if (currentState == TimerState.RUNNING_TOMATO) {
@@ -109,7 +137,7 @@ class ViewController: UIViewController {
     
     func transitionToBreak()
     {
-        remainingTicks = kBreakTime
+        remainingTicks = AppDelegate().sharedInstance().settings.userBreakTime
         timeCard.countdownLabel.text = "Break!"
         currentState = TimerState.RUNNING_BREAK
         promptUserForTaskEntry()
@@ -117,11 +145,15 @@ class ViewController: UIViewController {
     
     func transitionToStop()
     {
-        remainingTicks = kWorkTime
+        remainingTicks = 0
         currentState = TimerState.STOPPED
         updateDisplay()
         self.animEngine.animateToPosition(view: self.timeCard, position: AnimationEngine.offScreenLeftPosition, completion: { (anim:POPAnimation?, finished: Bool) -> Void
             in
+            self.goToSettingsBtn.isEnabled = true
+            self.goToSettingsBtn.alpha = 1.0
+            self.goToTaskListBtn.isEnabled = true
+            self.goToTaskListBtn.alpha = 1.0
         })
     }
     
@@ -151,10 +183,20 @@ class ViewController: UIViewController {
     
     func saveTask(taskToSave: String)
     {
-        print("The task to save is \(taskToSave)")
         let delegate : AppDelegate = AppDelegate().sharedInstance()
         delegate.completedTomatoes.append(taskToSave)
         delegate.saveTasks(completedTasks: delegate.completedTomatoes)
+    }
+    
+    func playMyFile(fileToPlay: NSURL)
+    {
+        do {
+            try player =  AVAudioPlayer(contentsOf: fileToPlay as URL)
+        } catch {
+            print("error playing file")
+        }
+        player?.prepareToPlay()
+        player?.play()
     }
 
 }
