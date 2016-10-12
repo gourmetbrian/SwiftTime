@@ -14,7 +14,7 @@ class Settings {
     let DEFAULT_BREAK_TIME = 300
     var userWorkTime: Int = 0
     var userBreakTime: Int = 0
-    var tickSoundOn = false
+    var tickSoundOn = true
 
     init()
     {

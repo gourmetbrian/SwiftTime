@@ -126,7 +126,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sX-Qz-x7D" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
-                                <color key="backgroundColor" red="0.25098039220000001" green="0.80784313730000001" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.25098039215686274" green="0.80784313725490198" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="95" id="ef7-GR-lz0"/>
                                     <constraint firstAttribute="height" constant="66" id="tAt-hq-BJu"/>
@@ -138,6 +138,9 @@
                                         <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="soundFXToggle:" destination="n9z-Nd-2AE" eventType="touchUpInside" id="fk5-zj-U72"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRv-VM-puI" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
                                 <color key="backgroundColor" red="0.25098039220000001" green="0.80784313730000001" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -223,6 +226,7 @@
                         <outlet property="breakTimeLabel" destination="nyc-Zh-odd" id="btz-37-MHS"/>
                         <outlet property="setBreakTimeBtn" destination="UCY-XH-5h1" id="IbZ-TM-vtD"/>
                         <outlet property="setWorkTimeBtn" destination="vRv-VM-puI" id="NsI-41-2gb"/>
+                        <outlet property="soundFXBtn" destination="8sX-Qz-x7D" id="J2G-5Y-sLN"/>
                         <outlet property="workTimeLabel" destination="gWE-Pn-D7b" id="SqJ-tr-Eiv"/>
                     </connections>
                 </viewController>
@@ -301,24 +305,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Uh1-Vg-fe6">
-                                <frame key="frameInset" minX="79" minY="151" width="240" height="199"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AkS-rp-SJF" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="mYn-Kq-Ibd"/>
+                                    <constraint firstAttribute="width" constant="37" id="zQZ-Ki-guQ"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="tomato-button"/>
+                                <connections>
+                                    <segue destination="AA8-Fw-f6s" kind="show" id="Nky-K7-gmO"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="View" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iYz-dF-fQL">
+                                <color key="backgroundColor" red="0.25098039220000001" green="0.80784313730000001" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Task" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpP-Yc-IP0">
+                                <frame key="frameInset" minX="67" minY="172" width="240" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iYz-dF-fQL" firstAttribute="leading" secondItem="htw-Li-Sgn" secondAttribute="leadingMargin" constant="51" id="Eqm-Ri-uju"/>
+                            <constraint firstItem="AkS-rp-SJF" firstAttribute="leading" secondItem="htw-Li-Sgn" secondAttribute="leadingMargin" id="VkA-Oz-4NB"/>
+                            <constraint firstItem="iYz-dF-fQL" firstAttribute="centerX" secondItem="htw-Li-Sgn" secondAttribute="centerX" id="a0i-Lf-AUk"/>
+                            <constraint firstItem="iYz-dF-fQL" firstAttribute="centerY" secondItem="htw-Li-Sgn" secondAttribute="centerY" id="brm-Bh-ir5"/>
+                            <constraint firstItem="AkS-rp-SJF" firstAttribute="top" secondItem="htw-Li-Sgn" secondAttribute="topMargin" constant="8" id="fGA-r8-Rqd"/>
+                            <constraint firstItem="iYz-dF-fQL" firstAttribute="top" secondItem="Vra-Y2-zZp" secondAttribute="bottom" constant="221" id="nvs-ai-f3F"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="textView" destination="Uh1-Vg-fe6" id="hEI-iB-P2h"/>
+                        <outlet property="label" destination="lpP-Yc-IP0" id="9ik-TR-CNv"/>
+                        <outlet property="textView" destination="iYz-dF-fQL" id="7io-Rp-akt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kdv-Qg-UjS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1807" y="-517"/>
+            <point key="canvasLocation" x="1805.5999999999999" y="-517.6911544227886"/>
         </scene>
     </scenes>
     <resources>
@@ -327,6 +355,7 @@
         <image name="tomato-button" width="345" height="342"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Q5N-hI-WkK"/>
+        <segue reference="nED-V8-uz6"/>
+        <segue reference="Nky-K7-gmO"/>
     </inferredMetricsTieBreakers>
 </document>

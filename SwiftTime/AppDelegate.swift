@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var settings: Settings = Settings()
     
-    var animationHasBeenShown: Bool = false
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

@@ -25,3 +25,8 @@ enum TimerState {
     case RUNNING_BREAK
     case STOPPED
 }
+
+//MARK:- Color
+
+let greenCustomColor = UIColor(red: 64/255.0, green: 206/255.0, blue: 126/255.0, alpha: 1.0) //#40CE7E
+let redCustomColor = UIColor(red: 255/255.0, green: 116/255.0, blue: 126/255.0, alpha: 1.0) //#ff744f

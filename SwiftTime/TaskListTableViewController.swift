@@ -20,23 +20,22 @@ class TaskListTableViewController: UIViewController, UITableViewDataSource, UITa
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func viewDidAppear(_ animated: Bool) {
 
-//        table.reloadData()
+        table.reloadData()
     }
 
     // MARK: - Table view data source
 
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-
         return AppDelegate().sharedInstance().completedTomatoes.count
     }
     
-    internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
         
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
         
@@ -61,8 +60,19 @@ class TaskListTableViewController: UIViewController, UITableViewDataSource, UITa
             
             let detailVC = segue.destination as! TaskDetailViewController
             
-            detailVC.activeRow = AppDelegate().sharedInstance().completedTomatoes[activeRow]
-                        
+            let text = AppDelegate().sharedInstance().completedTomatoes[activeRow]
+            var timeStamp: String?
+            var taskCompleted: String?
+            if let rangeOfDash = text.range(of: "-") {
+
+                timeStamp = String(text.characters.prefix(upTo: rangeOfDash.lowerBound))
+                taskCompleted = String(text.characters.suffix(from: rangeOfDash.upperBound))
+                
+            }
+            
+            detailVC.labelText = timeStamp!
+            detailVC.activeRow = taskCompleted!
+            
         }
     }
     

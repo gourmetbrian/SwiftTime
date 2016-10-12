@@ -17,6 +17,7 @@ class SettingsViewController: UIViewController {
         
     @IBOutlet weak var breakTimeLabel: UITextField!
     
+    @IBOutlet weak var soundFXBtn: CustomButton!
     
     
     
@@ -39,6 +40,19 @@ class SettingsViewController: UIViewController {
         
     }
 
+    @IBAction func soundFXToggle(_ sender: AnyObject) {
+        
+        if (AppDelegate().sharedInstance().settings.tickSoundOn == true) {
+            AppDelegate().sharedInstance().settings.tickSoundOn = false
+            self.soundFXBtn.setTitle("Turn On", for: UIControlState.normal)
+            self.soundFXBtn.backgroundColor = redCustomColor
+        } else {
+            AppDelegate().sharedInstance().settings.tickSoundOn = true
+            self.soundFXBtn.setTitle("Turn Off", for: UIControlState.normal)
+            self.soundFXBtn.backgroundColor = greenCustomColor
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -10,14 +10,19 @@ import UIKit
 
 class TaskDetailViewController: UIViewController {
 
-    @IBOutlet weak var textView: UITextView!
     
-    var activeRow = "Hello"
+    @IBOutlet weak var label: UILabel!
+    
+    
+    @IBOutlet weak var textView: UITextView!
+    var activeRow = ""
+    var labelText = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        textView.text = activeRow
+        label.text = labelText
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,7 +31,7 @@ class TaskDetailViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        textView.text = activeRow
+
     }
     
 

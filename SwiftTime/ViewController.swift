@@ -53,7 +53,7 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        animEngine.animateOnScreen()
+            animEngine.animateOnScreen()
     }
 
     override func didReceiveMemoryWarning() {
@@ -81,18 +81,18 @@ class ViewController: UIViewController {
     {
 
         if (currentState == .STOPPED ) {
-        remainingTicks = AppDelegate().sharedInstance().settings.userWorkTime
+        remainingTicks = 3 //AppDelegate().sharedInstance().settings.userWorkTime
         currentState = .RUNNING_TOMATO
+        self.goToSettingsBtn.isEnabled = false
+        self.goToSettingsBtn.alpha = 0.4
+        self.goToTaskListBtn.isEnabled = false
+        self.goToTaskListBtn.alpha = 0.4
         timeCard = Bundle.main.loadNibNamed("Card", owner: self, options: nil)?[0] as! Card!
         timeCard.center = AnimationEngine.offScreenRightPosition
         self.view.addSubview(timeCard)
         timeCard.countdownLabel.text = "Work!"
         self.animEngine.animateToPosition(view: self.timeCard, position: AnimationEngine.screenCenterPosition, completion: { (anim:POPAnimation?, finished: Bool) -> Void
             in
-            self.goToSettingsBtn.isEnabled = false
-            self.goToSettingsBtn.alpha = 0.4
-            self.goToTaskListBtn.isEnabled = false
-            self.goToTaskListBtn.alpha = 0.4
             self.updateDisplay()
             self.startCountdown()
             })
@@ -118,11 +118,15 @@ class ViewController: UIViewController {
         updateDisplay()
         
         startButton.scaleAnimation()
+        if (AppDelegate().sharedInstance().settings.tickSoundOn == true) {
         playMyFile(fileToPlay: tickPath)
+        }
 
         
         if (remainingTicks == 0) {
+            if (AppDelegate().sharedInstance().settings.tickSoundOn == true) {
             playMyFile(fileToPlay: alarmPath)
+            }
             timer?.invalidate()
             timer = nil
             if (currentState == TimerState.RUNNING_TOMATO) {
@@ -164,7 +168,9 @@ class ViewController: UIViewController {
         let submitAction = UIAlertAction(title: "Submit", style: UIAlertActionStyle.default, handler: {
             alert -> Void in
             
-            self.saveTask(taskToSave: (alertController.textFields?.first?.text)!)
+            if let task = alertController.textFields?.first?.text {
+                self.saveTask(taskToSave: "\(self.createTimeStamp()) - \(task)")
+            }
             self.updateDisplay()
             self.startCountdown()
             alertController.dismiss(animated: true, completion: {
@@ -177,8 +183,6 @@ class ViewController: UIViewController {
         alertController.addAction(submitAction)
         
         self.present(alertController, animated: true, completion: nil)
-
-
     }
     
     func saveTask(taskToSave: String)
@@ -197,6 +201,16 @@ class ViewController: UIViewController {
         }
         player?.prepareToPlay()
         player?.play()
+    }
+    
+    func createTimeStamp() -> String
+    {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateStyle = DateFormatter.Style.short
+        formatter.timeStyle = DateFormatter.Style.short
+        
+        return formatter.string(from: date)
     }
 
 }
