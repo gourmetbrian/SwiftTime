@@ -65,8 +65,10 @@ class TaskListTableViewController: UIViewController, UITableViewDataSource, UITa
             var taskCompleted: String?
             if let rangeOfDash = text.range(of: "-") {
 
-                timeStamp = String(text.characters.prefix(upTo: rangeOfDash.lowerBound))
+                timeStamp = (String(text.characters.prefix(upTo: rangeOfDash.lowerBound)))
                 taskCompleted = String(text.characters.suffix(from: rangeOfDash.upperBound))
+                timeStamp = timeStamp?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+                taskCompleted = taskCompleted?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
                 
             }
             
@@ -74,6 +76,10 @@ class TaskListTableViewController: UIViewController, UITableViewDataSource, UITa
             detailVC.activeRow = taskCompleted!
             
         }
+    }
+    
+    @IBAction func tasksDone(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
     
 

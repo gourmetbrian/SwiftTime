@@ -212,6 +212,15 @@ class ViewController: UIViewController {
         
         return formatter.string(from: date)
     }
+    
+//    @IBAction func addCard(sender: AnyObject) {
+//        var settingsCard : SettingsViewController = SettingsViewController()
+//        self.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+//        // Cover Vertical is necessary for CurrentContext
+//        self.modalPresentationStyle = .currentContext
+//        // Display on top of    current UIView
+//        self.present(settingsCard, animated: true, completion: nil)
+//    }
 
 }
 
