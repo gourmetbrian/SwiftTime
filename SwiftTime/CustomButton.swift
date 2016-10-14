@@ -72,4 +72,12 @@ class CustomButton: UIButton {
         scaleAnim?.toValue = NSValue(cgSize: CGSize(width: 1, height: 1))
         self.layer.pop_add(scaleAnim, forKey: "layerScaleDefaultAnimation")
     }
+    
+    override var isHighlighted: Bool {
+        didSet {
+            if isHighlighted {
+                isHighlighted = false
+            }
+        }
+    }
 }
