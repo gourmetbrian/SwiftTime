@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TaskEntry" customModule="SwiftTime" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What Did You Do?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIy-OQ-axL">
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Processed reports..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bsE-VO-34x">
+                    <color key="backgroundColor" red="0.25098039215686274" green="0.80784313725490198" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shh-xJ-uLT" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
+                    <state key="normal" title="Submit and Start Break"/>
+                    <connections>
+                        <action selector="submitBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="Qx4-4z-hoc"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.72549019607843135" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="bsE-VO-34x" firstAttribute="leading" secondItem="zIy-OQ-axL" secondAttribute="leading" id="8Fp-Cm-cuB"/>
+                <constraint firstItem="shh-xJ-uLT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="44" id="CVW-Ep-knU"/>
+                <constraint firstItem="bsE-VO-34x" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="HTq-Hr-jZI"/>
+                <constraint firstItem="shh-xJ-uLT" firstAttribute="top" secondItem="bsE-VO-34x" secondAttribute="bottom" constant="25" id="L41-c7-S0X"/>
+                <constraint firstItem="bsE-VO-34x" firstAttribute="trailing" secondItem="zIy-OQ-axL" secondAttribute="trailing" id="ReL-Dz-elq"/>
+                <constraint firstItem="bsE-VO-34x" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="122" id="Wha-5W-z0z"/>
+                <constraint firstItem="bsE-VO-34x" firstAttribute="top" secondItem="zIy-OQ-axL" secondAttribute="bottom" constant="47" id="Ykp-sH-9Tt"/>
+                <constraint firstItem="bsE-VO-34x" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hqc-EJ-NUT"/>
+                <constraint firstAttribute="trailing" secondItem="shh-xJ-uLT" secondAttribute="trailing" constant="38" id="uyk-Zy-fYX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="submitBtn" destination="shh-xJ-uLT" id="NAd-DA-EyL"/>
+                <outlet property="taskEntryConstraint" destination="hqc-EJ-NUT" id="FhW-eA-iEs"/>
+                <outlet property="userTaskEntry" destination="bsE-VO-34x" id="sYi-iY-CJJ"/>
+            </connections>
+            <point key="canvasLocation" x="334" y="138"/>
+        </view>
+    </objects>
+</document>

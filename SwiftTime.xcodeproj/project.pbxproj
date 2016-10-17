@@ -7,21 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8786A0D54D1EC14F8AB6E195 /* Pods_SwiftTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E495DF20B284428E7058A036 /* Pods_SwiftTime.framework */; };
+		A92DB7471DB15C34002C8D12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92DB7461DB15C34002C8D12 /* LaunchScreen.storyboard */; };
+		A9559EC01DA6CD4F00C17F57 /* TaskEntry.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9559EBF1DA6CD4F00C17F57 /* TaskEntry.xib */; };
+		A9559EC21DA6CD7500C17F57 /* TaskEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9559EC11DA6CD7500C17F57 /* TaskEntry.swift */; };
+		A96842421DAD086F0085D7EC /* alarm.caf in Resources */ = {isa = PBXBuildFile; fileRef = A96842411DAD086F0085D7EC /* alarm.caf */; };
+		A96842441DAD087D0085D7EC /* tick.caf in Resources */ = {isa = PBXBuildFile; fileRef = A96842431DAD087D0085D7EC /* tick.caf */; };
+		A9A53ACF1DA6C80200FE7B15 /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A53ACE1DA6C80200FE7B15 /* test.m */; };
 		A9AFF9D91DA2ADA9007F85BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AFF9D81DA2ADA9007F85BF /* AppDelegate.swift */; };
 		A9AFF9DB1DA2ADA9007F85BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AFF9DA1DA2ADA9007F85BF /* ViewController.swift */; };
 		A9AFF9DE1DA2ADA9007F85BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9AFF9DC1DA2ADA9007F85BF /* Main.storyboard */; };
 		A9AFF9E01DA2ADA9007F85BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9AFF9DF1DA2ADA9007F85BF /* Assets.xcassets */; };
-		A9AFF9E31DA2ADA9007F85BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9AFF9E11DA2ADA9007F85BF /* LaunchScreen.storyboard */; };
+		A9AFF9EB1DA2AFAB007F85BF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AFF9EA1DA2AFAB007F85BF /* Constants.swift */; };
+		A9B31AFF1DA5796500865377 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B31AFE1DA5796500865377 /* CustomButton.swift */; };
+		A9B31B041DA57DE900865377 /* AnimationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B31B031DA57DE900865377 /* AnimationEngine.swift */; };
+		A9B31B101DA5C0B200865377 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B31B0F1DA5C0B200865377 /* Card.swift */; };
+		A9B31B121DA5C0FA00865377 /* Card.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9B31B111DA5C0FA00865377 /* Card.xib */; };
+		A9EBF9131DAB2EEC00C37599 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EBF9121DAB2EEC00C37599 /* Settings.swift */; };
+		A9EBF9151DAB33DE00C37599 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EBF9141DAB33DE00C37599 /* SettingsViewController.swift */; };
+		A9FB60771DA820E90014A650 /* TaskListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FB60761DA820E90014A650 /* TaskListTableViewController.swift */; };
+		A9FB60791DA86A0B0014A650 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FB60781DA86A0B0014A650 /* TaskDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		427830A766D0DDCAEC565E0A /* Pods-SwiftTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftTime/Pods-SwiftTime.release.xcconfig"; sourceTree = "<group>"; };
+		A92DB7461DB15C34002C8D12 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A9559EBF1DA6CD4F00C17F57 /* TaskEntry.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaskEntry.xib; sourceTree = "<group>"; };
+		A9559EC11DA6CD7500C17F57 /* TaskEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskEntry.swift; sourceTree = "<group>"; };
+		A96842411DAD086F0085D7EC /* alarm.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = alarm.caf; path = ../../../../../Desktop/alarm.caf; sourceTree = "<group>"; };
+		A96842431DAD087D0085D7EC /* tick.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = tick.caf; path = ../../../../../Desktop/tick.caf; sourceTree = "<group>"; };
+		A9A53ACD1DA6C80200FE7B15 /* SwiftTime-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftTime-Bridging-Header.h"; sourceTree = "<group>"; };
+		A9A53ACE1DA6C80200FE7B15 /* test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = "<group>"; };
 		A9AFF9D51DA2ADA9007F85BF /* SwiftTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9AFF9D81DA2ADA9007F85BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9AFF9DA1DA2ADA9007F85BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A9AFF9DD1DA2ADA9007F85BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A9AFF9DF1DA2ADA9007F85BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A9AFF9E21DA2ADA9007F85BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9AFF9E41DA2ADA9007F85BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9AFF9EA1DA2AFAB007F85BF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A9B31AFE1DA5796500865377 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		A9B31B031DA57DE900865377 /* AnimationEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationEngine.swift; sourceTree = "<group>"; };
+		A9B31B0F1DA5C0B200865377 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		A9B31B111DA5C0FA00865377 /* Card.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card.xib; sourceTree = "<group>"; };
+		A9EBF9121DAB2EEC00C37599 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		A9EBF9141DAB33DE00C37599 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A9FB60761DA820E90014A650 /* TaskListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskListTableViewController.swift; sourceTree = "<group>"; };
+		A9FB60781DA86A0B0014A650 /* TaskDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
+		D47651BD36F3609353451573 /* Pods-SwiftTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftTime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftTime/Pods-SwiftTime.debug.xcconfig"; sourceTree = "<group>"; };
+		E495DF20B284428E7058A036 /* Pods_SwiftTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +62,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8786A0D54D1EC14F8AB6E195 /* Pods_SwiftTime.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A968423C1DACFEE80085D7EC /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				A96842431DAD087D0085D7EC /* tick.caf */,
+				A96842411DAD086F0085D7EC /* alarm.caf */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 		A9AFF9CC1DA2ADA9007F85BF = {
 			isa = PBXGroup;
 			children = (
 				A9AFF9D71DA2ADA9007F85BF /* SwiftTime */,
 				A9AFF9D61DA2ADA9007F85BF /* Products */,
+				F3DC8984C669AD67E9D832BB /* Pods */,
+				E9AA16B298AE50DB131F6243 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +99,77 @@
 		A9AFF9D71DA2ADA9007F85BF /* SwiftTime */ = {
 			isa = PBXGroup;
 			children = (
-				A9AFF9D81DA2ADA9007F85BF /* AppDelegate.swift */,
-				A9AFF9DA1DA2ADA9007F85BF /* ViewController.swift */,
+				A968423C1DACFEE80085D7EC /* Sounds */,
+				A9B31B131DA66CCD00865377 /* Util */,
+				A9B31B0E1DA5C09F00865377 /* View */,
+				A9B31AFC1DA5792F00865377 /* Models */,
+				A9B31AFB1DA5792600865377 /* Controllers */,
 				A9AFF9DC1DA2ADA9007F85BF /* Main.storyboard */,
 				A9AFF9DF1DA2ADA9007F85BF /* Assets.xcassets */,
-				A9AFF9E11DA2ADA9007F85BF /* LaunchScreen.storyboard */,
 				A9AFF9E41DA2ADA9007F85BF /* Info.plist */,
+				A9A53ACE1DA6C80200FE7B15 /* test.m */,
+				A9A53ACD1DA6C80200FE7B15 /* SwiftTime-Bridging-Header.h */,
 			);
 			path = SwiftTime;
+			sourceTree = "<group>";
+		};
+		A9B31AFB1DA5792600865377 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A9AFF9DA1DA2ADA9007F85BF /* ViewController.swift */,
+				A9FB60761DA820E90014A650 /* TaskListTableViewController.swift */,
+				A9FB60781DA86A0B0014A650 /* TaskDetailViewController.swift */,
+				A9EBF9141DAB33DE00C37599 /* SettingsViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A9B31AFC1DA5792F00865377 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A9AFF9EA1DA2AFAB007F85BF /* Constants.swift */,
+				A9B31AFE1DA5796500865377 /* CustomButton.swift */,
+				A9EBF9121DAB2EEC00C37599 /* Settings.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		A9B31B0E1DA5C09F00865377 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A9B31B0F1DA5C0B200865377 /* Card.swift */,
+				A9B31B111DA5C0FA00865377 /* Card.xib */,
+				A9559EBF1DA6CD4F00C17F57 /* TaskEntry.xib */,
+				A9559EC11DA6CD7500C17F57 /* TaskEntry.swift */,
+				A92DB7461DB15C34002C8D12 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A9B31B131DA66CCD00865377 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				A9B31B031DA57DE900865377 /* AnimationEngine.swift */,
+				A9AFF9D81DA2ADA9007F85BF /* AppDelegate.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		E9AA16B298AE50DB131F6243 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E495DF20B284428E7058A036 /* Pods_SwiftTime.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3DC8984C669AD67E9D832BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D47651BD36F3609353451573 /* Pods-SwiftTime.debug.xcconfig */,
+				427830A766D0DDCAEC565E0A /* Pods-SwiftTime.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +179,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9AFF9E71DA2ADA9007F85BF /* Build configuration list for PBXNativeTarget "SwiftTime" */;
 			buildPhases = (
+				CDE0FD19F7991D6DB620AF34 /* [CP] Check Pods Manifest.lock */,
 				A9AFF9D11DA2ADA9007F85BF /* Sources */,
 				A9AFF9D21DA2ADA9007F85BF /* Frameworks */,
 				A9AFF9D31DA2ADA9007F85BF /* Resources */,
+				EE5ECC85CBBA90E25816C628 /* [CP] Embed Pods Frameworks */,
+				3E6B8FCF05C8EBE05EE5408D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +207,8 @@
 				TargetAttributes = {
 					A9AFF9D41DA2ADA9007F85BF = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 86778T28NW;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -123,21 +236,83 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9AFF9E31DA2ADA9007F85BF /* LaunchScreen.storyboard in Resources */,
+				A9559EC01DA6CD4F00C17F57 /* TaskEntry.xib in Resources */,
 				A9AFF9E01DA2ADA9007F85BF /* Assets.xcassets in Resources */,
 				A9AFF9DE1DA2ADA9007F85BF /* Main.storyboard in Resources */,
+				A9B31B121DA5C0FA00865377 /* Card.xib in Resources */,
+				A92DB7471DB15C34002C8D12 /* LaunchScreen.storyboard in Resources */,
+				A96842421DAD086F0085D7EC /* alarm.caf in Resources */,
+				A96842441DAD087D0085D7EC /* tick.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3E6B8FCF05C8EBE05EE5408D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftTime/Pods-SwiftTime-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDE0FD19F7991D6DB620AF34 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EE5ECC85CBBA90E25816C628 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftTime/Pods-SwiftTime-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A9AFF9D11DA2ADA9007F85BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9FB60771DA820E90014A650 /* TaskListTableViewController.swift in Sources */,
+				A9A53ACF1DA6C80200FE7B15 /* test.m in Sources */,
+				A9559EC21DA6CD7500C17F57 /* TaskEntry.swift in Sources */,
+				A9B31AFF1DA5796500865377 /* CustomButton.swift in Sources */,
+				A9FB60791DA86A0B0014A650 /* TaskDetailViewController.swift in Sources */,
+				A9B31B101DA5C0B200865377 /* Card.swift in Sources */,
 				A9AFF9DB1DA2ADA9007F85BF /* ViewController.swift in Sources */,
 				A9AFF9D91DA2ADA9007F85BF /* AppDelegate.swift in Sources */,
+				A9B31B041DA57DE900865377 /* AnimationEngine.swift in Sources */,
+				A9EBF9131DAB2EEC00C37599 /* Settings.swift in Sources */,
+				A9AFF9EB1DA2AFAB007F85BF /* Constants.swift in Sources */,
+				A9EBF9151DAB33DE00C37599 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,14 +325,6 @@
 				A9AFF9DD1DA2ADA9007F85BF /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A9AFF9E11DA2ADA9007F85BF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A9AFF9E21DA2ADA9007F85BF /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -256,24 +423,35 @@
 		};
 		A9AFF9E81DA2ADA9007F85BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D47651BD36F3609353451573 /* Pods-SwiftTime.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 86778T28NW;
 				INFOPLIST_FILE = SwiftTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bwlane.SwiftTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftTime/SwiftTime-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		A9AFF9E91DA2ADA9007F85BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 427830A766D0DDCAEC565E0A /* Pods-SwiftTime.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 86778T28NW;
 				INFOPLIST_FILE = SwiftTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bwlane.SwiftTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftTime/SwiftTime-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -297,6 +475,7 @@
 				A9AFF9E91DA2ADA9007F85BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

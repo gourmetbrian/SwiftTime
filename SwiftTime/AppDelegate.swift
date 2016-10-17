@@ -12,10 +12,21 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    var animEngine: AnimationEngine!
+    
+    var completedTomatoes = [String]()
+    
+    var settings: Settings = Settings()
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //Something is going on below, the function that gets the array is going haywire
+        
+        completedTomatoes = getTasks()
+
         return true
     }
 
@@ -39,6 +50,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+
+    func sharedInstance() -> AppDelegate
+    {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
+    
+    func saveTasks(completedTasks: [String])
+    {
+        UserDefaults.standard.set(completedTasks, forKey: keyForSavedTasks)
+    }
+    
+    func getTasks() -> [String]
+    {
+        return UserDefaults.standard.object(forKey: keyForSavedTasks) as? [String] ?? [String]()
     }
 
 
