@@ -198,6 +198,15 @@
                                     <action selector="settingsDone:" destination="n9z-Nd-2AE" eventType="touchUpInside" id="BzL-BJ-Gf4"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D61-XP-yms">
+                                <frame key="frameInset" minX="313" minY="629" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
+                                <state key="normal" title="i"/>
+                                <connections>
+                                    <segue destination="xnl-cp-OwX" kind="presentation" id="Ikf-fy-FuW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -234,6 +243,73 @@
             </objects>
             <point key="canvasLocation" x="2697" y="-644"/>
         </scene>
+        <!--Attributes View Controller-->
+        <scene sceneID="QbM-0n-3v7">
+            <objects>
+                <viewController id="xnl-cp-OwX" customClass="AttributesViewController" customModule="SwiftTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YKQ-By-4iL"/>
+                        <viewControllerLayoutGuide type="bottom" id="1zp-eQ-KTh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FgY-9S-vBr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tomato image by Freepik" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAf-Y6-cCv">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="4i2-28-uXQ"/>
+                                    <constraint firstAttribute="width" constant="286" id="phn-bp-cHH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vem-HP-Nt0" customClass="Attri">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="204" id="cIu-i6-b8k"/>
+                                </constraints>
+                                <string key="text">To use: Press the tomato to start a work session. Focus on one task until the timer beeps, then record a note about what you accomplished. Then take a well-earned break. You can adjust work and break times in settings, or turn off sounds. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icons by Gregor Cesnar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Grc-at-MNJ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="YuO-SX-0eq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1XN-rk-q4u" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="09O-21-JpV"/>
+                                    <constraint firstAttribute="width" constant="46" id="Zvu-qW-O82"/>
+                                </constraints>
+                                <state key="normal" title="Settings" image="settings (1)"/>
+                                <connections>
+                                    <action selector="attributesDone:" destination="xnl-cp-OwX" eventType="touchUpInside" id="OjD-wL-ZjM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vem-HP-Nt0" firstAttribute="centerX" secondItem="Grc-at-MNJ" secondAttribute="centerX" id="03t-7D-vTh"/>
+                            <constraint firstItem="Vem-HP-Nt0" firstAttribute="leading" secondItem="FgY-9S-vBr" secondAttribute="leadingMargin" constant="28" id="Iei-i7-tda"/>
+                            <constraint firstItem="Vem-HP-Nt0" firstAttribute="leading" secondItem="hAf-Y6-cCv" secondAttribute="leading" id="PYe-Mc-8mJ"/>
+                            <constraint firstItem="1zp-eQ-KTh" firstAttribute="top" secondItem="hAf-Y6-cCv" secondAttribute="bottom" constant="62" id="R2U-lY-w3D"/>
+                            <constraint firstItem="1XN-rk-q4u" firstAttribute="top" secondItem="YKQ-By-4iL" secondAttribute="bottom" constant="8" symbolic="YES" id="RA2-Wg-Jxu"/>
+                            <constraint firstItem="Vem-HP-Nt0" firstAttribute="centerX" secondItem="hAf-Y6-cCv" secondAttribute="centerX" id="RHc-v2-nSJ"/>
+                            <constraint firstItem="Vem-HP-Nt0" firstAttribute="top" secondItem="1XN-rk-q4u" secondAttribute="bottom" constant="60" id="XF9-YL-yyH"/>
+                            <constraint firstItem="hAf-Y6-cCv" firstAttribute="top" secondItem="Grc-at-MNJ" secondAttribute="bottom" constant="21" id="mSM-3d-Qeb"/>
+                            <constraint firstItem="1XN-rk-q4u" firstAttribute="leading" secondItem="FgY-9S-vBr" secondAttribute="leadingMargin" id="r75-CN-XWe"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HTa-RV-Tza" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3389.5999999999999" y="-646.32683658170924"/>
+        </scene>
         <!--Task List Table View Controller-->
         <scene sceneID="xY5-lC-Eni">
             <objects>
@@ -255,7 +331,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MJF-2O-QkV" id="7Fb-8z-aYq">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <frame key="frameInset" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>

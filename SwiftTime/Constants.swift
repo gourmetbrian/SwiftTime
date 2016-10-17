@@ -8,13 +8,13 @@
 
 import Foundation
 
-//commented for debugging
-//let kWorkTime = 120
-let kWorkTime = 3
-
-//commented for debugging
-//let kBreakTime = 300
-let kBreakTime = 5
+////commented for debugging
+////let kWorkTime = 120
+//let kWorkTime = 3
+//
+////commented for debugging
+////let kBreakTime = 300
+//let kBreakTime = 5
 
 let keyForSavedTasks = "UserSavedTasks"
 

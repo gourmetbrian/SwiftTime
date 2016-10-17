@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		8786A0D54D1EC14F8AB6E195 /* Pods_SwiftTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E495DF20B284428E7058A036 /* Pods_SwiftTime.framework */; };
+		A90F96251DB467DB00741361 /* AttributesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90F96241DB467DB00741361 /* AttributesViewController.swift */; };
 		A92DB7471DB15C34002C8D12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92DB7461DB15C34002C8D12 /* LaunchScreen.storyboard */; };
 		A9559EC01DA6CD4F00C17F57 /* TaskEntry.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9559EBF1DA6CD4F00C17F57 /* TaskEntry.xib */; };
 		A9559EC21DA6CD7500C17F57 /* TaskEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9559EC11DA6CD7500C17F57 /* TaskEntry.swift */; };
 		A96842421DAD086F0085D7EC /* alarm.caf in Resources */ = {isa = PBXBuildFile; fileRef = A96842411DAD086F0085D7EC /* alarm.caf */; };
 		A96842441DAD087D0085D7EC /* tick.caf in Resources */ = {isa = PBXBuildFile; fileRef = A96842431DAD087D0085D7EC /* tick.caf */; };
-		A9A53ACF1DA6C80200FE7B15 /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A53ACE1DA6C80200FE7B15 /* test.m */; };
 		A9AFF9D91DA2ADA9007F85BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AFF9D81DA2ADA9007F85BF /* AppDelegate.swift */; };
 		A9AFF9DB1DA2ADA9007F85BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AFF9DA1DA2ADA9007F85BF /* ViewController.swift */; };
 		A9AFF9DE1DA2ADA9007F85BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9AFF9DC1DA2ADA9007F85BF /* Main.storyboard */; };
@@ -31,13 +31,13 @@
 
 /* Begin PBXFileReference section */
 		427830A766D0DDCAEC565E0A /* Pods-SwiftTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftTime/Pods-SwiftTime.release.xcconfig"; sourceTree = "<group>"; };
+		A90F96241DB467DB00741361 /* AttributesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributesViewController.swift; sourceTree = "<group>"; };
 		A92DB7461DB15C34002C8D12 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9559EBF1DA6CD4F00C17F57 /* TaskEntry.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaskEntry.xib; sourceTree = "<group>"; };
 		A9559EC11DA6CD7500C17F57 /* TaskEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskEntry.swift; sourceTree = "<group>"; };
 		A96842411DAD086F0085D7EC /* alarm.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = alarm.caf; path = ../../../../../Desktop/alarm.caf; sourceTree = "<group>"; };
 		A96842431DAD087D0085D7EC /* tick.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = tick.caf; path = ../../../../../Desktop/tick.caf; sourceTree = "<group>"; };
 		A9A53ACD1DA6C80200FE7B15 /* SwiftTime-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftTime-Bridging-Header.h"; sourceTree = "<group>"; };
-		A9A53ACE1DA6C80200FE7B15 /* test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = "<group>"; };
 		A9AFF9D51DA2ADA9007F85BF /* SwiftTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9AFF9D81DA2ADA9007F85BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9AFF9DA1DA2ADA9007F85BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,7 +107,6 @@
 				A9AFF9DC1DA2ADA9007F85BF /* Main.storyboard */,
 				A9AFF9DF1DA2ADA9007F85BF /* Assets.xcassets */,
 				A9AFF9E41DA2ADA9007F85BF /* Info.plist */,
-				A9A53ACE1DA6C80200FE7B15 /* test.m */,
 				A9A53ACD1DA6C80200FE7B15 /* SwiftTime-Bridging-Header.h */,
 			);
 			path = SwiftTime;
@@ -120,6 +119,7 @@
 				A9FB60761DA820E90014A650 /* TaskListTableViewController.swift */,
 				A9FB60781DA86A0B0014A650 /* TaskDetailViewController.swift */,
 				A9EBF9141DAB33DE00C37599 /* SettingsViewController.swift */,
+				A90F96241DB467DB00741361 /* AttributesViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -302,7 +302,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9FB60771DA820E90014A650 /* TaskListTableViewController.swift in Sources */,
-				A9A53ACF1DA6C80200FE7B15 /* test.m in Sources */,
 				A9559EC21DA6CD7500C17F57 /* TaskEntry.swift in Sources */,
 				A9B31AFF1DA5796500865377 /* CustomButton.swift in Sources */,
 				A9FB60791DA86A0B0014A650 /* TaskDetailViewController.swift in Sources */,
@@ -313,6 +312,7 @@
 				A9EBF9131DAB2EEC00C37599 /* Settings.swift in Sources */,
 				A9AFF9EB1DA2AFAB007F85BF /* Constants.swift in Sources */,
 				A9EBF9151DAB33DE00C37599 /* SettingsViewController.swift in Sources */,
+				A90F96251DB467DB00741361 /* AttributesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
