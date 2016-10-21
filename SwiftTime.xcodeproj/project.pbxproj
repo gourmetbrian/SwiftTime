@@ -210,7 +210,7 @@
 				TargetAttributes = {
 					A9AFF9D41DA2ADA9007F85BF = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 86778T28NW;
+						DevelopmentTeam = LAYLS44ZM3;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
@@ -432,7 +432,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 86778T28NW;
+				DEVELOPMENT_TEAM = LAYLS44ZM3;
 				INFOPLIST_FILE = SwiftTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bwlane.SwiftTime;
@@ -450,7 +450,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 86778T28NW;
+				DEVELOPMENT_TEAM = LAYLS44ZM3;
 				INFOPLIST_FILE = SwiftTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bwlane.SwiftTime;

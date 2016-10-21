@@ -68,7 +68,6 @@ class AnimationEngine {
         moveAnim?.springSpeed = 8
         moveAnim?.completionBlock = completion
         view.pop_add(moveAnim, forKey: "moveToPosition")
-        
     }
     
 

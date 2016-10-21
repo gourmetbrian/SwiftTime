@@ -48,11 +48,7 @@ class ViewController: UIViewController {
         currentState = TimerState.STOPPED        
         initialSetup()
         self.hideKeyboardWhenTappedAround()
-//        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.myObserverMethod(_:)), name:NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
-        
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.myObserverMethod(notification:)), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
-
-
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -62,7 +58,6 @@ class ViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
  
     //MARK:- Setup Funcs
@@ -76,7 +71,10 @@ class ViewController: UIViewController {
     {
             let mins: String = String(format: "%02d", remainingTicks / 60)
             let secs: String = String(format: "%02d", remainingTicks % 60)
+        
+        if ((timeCard) != nil) {
             timeCard.countdownLabel.text = mins + ":" + secs
+        }
     }
     
     //MARK:- Button Actions
@@ -84,7 +82,7 @@ class ViewController: UIViewController {
     @IBAction func startTomatoPressed(_ sender: AnyObject)
     {
         if (currentState == .STOPPED ) {
-        remainingTicks = 3 //AppDelegate().sharedInstance().settings.userWorkTime
+        remainingTicks = AppDelegate().sharedInstance().settings.userWorkTime
         currentState = .RUNNING_TOMATO
         self.goToSettingsBtn.isEnabled = false
         self.goToSettingsBtn.alpha = 0.4
@@ -125,7 +123,6 @@ class ViewController: UIViewController {
         playMyFile(fileToPlay: tickPath)
         }
 
-        
         if (remainingTicks == 0) {
             if (AppDelegate().sharedInstance().settings.tickSoundOn == true) {
             playMyFile(fileToPlay: alarmPath)
@@ -154,6 +151,7 @@ class ViewController: UIViewController {
     {
         remainingTicks = 0
         currentState = TimerState.STOPPED
+        if (timeCard != nil) {
         updateDisplay()
         self.animEngine.animateToPosition(view: self.timeCard, position: AnimationEngine.offScreenLeftPosition, completion: { (anim:POPAnimation?, finished: Bool) -> Void
             in
@@ -162,6 +160,7 @@ class ViewController: UIViewController {
             self.goToTaskListBtn.isEnabled = true
             self.goToTaskListBtn.alpha = 1.0
         })
+       } 
     }
     
     func promptUserForTaskEntry()
