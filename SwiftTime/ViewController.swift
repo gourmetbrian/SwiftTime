@@ -47,7 +47,11 @@ class ViewController: UIViewController {
         self.animEngine = AnimationEngine(constraints: [startButtonConstraint, settingsButtonConstraint,taskButtonConstraint])
         currentState = TimerState.STOPPED        
         initialSetup()
+        self.hideKeyboardWhenTappedAround()
+//        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.myObserverMethod(_:)), name:NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.myObserverMethod(notification:)), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+
 
     }
     
@@ -210,6 +214,12 @@ class ViewController: UIViewController {
         formatter.timeStyle = DateFormatter.Style.short
         
         return formatter.string(from: date)
+    }
+    
+    func myObserverMethod(notification: NSNotification) {
+        timer?.invalidate()
+        timer = nil
+        transitionToStop()
     }
 }
 
