@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8786A0D54D1EC14F8AB6E195 /* Pods_SwiftTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E495DF20B284428E7058A036 /* Pods_SwiftTime.framework */; };
+		A90BBA9D1DC276880078BABB /* RoundLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90BBA9C1DC276880078BABB /* RoundLabel.swift */; };
 		A90F96251DB467DB00741361 /* AttributesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90F96241DB467DB00741361 /* AttributesViewController.swift */; };
 		A92DB7471DB15C34002C8D12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92DB7461DB15C34002C8D12 /* LaunchScreen.storyboard */; };
 		A9559EC01DA6CD4F00C17F57 /* TaskEntry.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9559EBF1DA6CD4F00C17F57 /* TaskEntry.xib */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		427830A766D0DDCAEC565E0A /* Pods-SwiftTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftTime/Pods-SwiftTime.release.xcconfig"; sourceTree = "<group>"; };
+		A90BBA9C1DC276880078BABB /* RoundLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundLabel.swift; sourceTree = "<group>"; };
 		A90F96241DB467DB00741361 /* AttributesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttributesViewController.swift; sourceTree = "<group>"; };
 		A92DB7461DB15C34002C8D12 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9559EBF1DA6CD4F00C17F57 /* TaskEntry.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaskEntry.xib; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				A9559EBF1DA6CD4F00C17F57 /* TaskEntry.xib */,
 				A9559EC11DA6CD7500C17F57 /* TaskEntry.swift */,
 				A92DB7461DB15C34002C8D12 /* LaunchScreen.storyboard */,
+				A90BBA9C1DC276880078BABB /* RoundLabel.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				A9EBF9151DAB33DE00C37599 /* SettingsViewController.swift in Sources */,
 				A95AA1051DBA247B00E23D23 /* KeyboardDismissalExtension.swift in Sources */,
 				A90F96251DB467DB00741361 /* AttributesViewController.swift in Sources */,
+				A90BBA9D1DC276880078BABB /* RoundLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

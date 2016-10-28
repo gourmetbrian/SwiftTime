@@ -10,19 +10,18 @@ import UIKit
 
 class TaskDetailViewController: UIViewController {
 
+    @IBOutlet weak var textOfLabel: RoundLabel!
     
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var textOfTaskLabel: RoundLabel!
     
-    
-    @IBOutlet weak var textView: UITextView!
-    var activeRow = ""
     var labelText = ""
+    var activeRow = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        textView.text = activeRow
-        label.text = labelText
+        textOfTaskLabel.text = activeRow
+        textOfLabel.text = labelText
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,16 +33,6 @@ class TaskDetailViewController: UIViewController {
 
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     @IBAction func detailDone(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
