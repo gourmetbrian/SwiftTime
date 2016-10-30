@@ -439,7 +439,7 @@
 				DEVELOPMENT_TEAM = LAYLS44ZM3;
 				INFOPLIST_FILE = SwiftTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bwlane.SwiftTime;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bwlane.Swift-Time";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftTime/SwiftTime-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -457,7 +457,7 @@
 				DEVELOPMENT_TEAM = LAYLS44ZM3;
 				INFOPLIST_FILE = SwiftTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.bwlane.SwiftTime;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bwlane.Swift-Time";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftTime/SwiftTime-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
