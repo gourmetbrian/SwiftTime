@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftTime" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +18,441 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mP-Ok-J29" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
+                                <color key="backgroundColor" red="1" green="0.59576851487178895" blue="0.5284846064654336" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="149" id="IF0-i6-fae"/>
+                                    <constraint firstAttribute="width" constant="150" id="YIe-4k-qAW"/>
+                                </constraints>
+                                <state key="normal" title="Start Tomato" image="tomato-button"/>
+                                <connections>
+                                    <action selector="startTomatoPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eI0-eR-Keo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SkM-aQ-eFM" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="QF2-li-bp9"/>
+                                    <constraint firstAttribute="width" constant="47" id="W5f-jO-akf"/>
+                                </constraints>
+                                <state key="normal" title="Tasks" image="notepad"/>
+                                <connections>
+                                    <segue destination="AA8-Fw-f6s" kind="presentation" id="t8S-eI-zcF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykK-Kj-MBH" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="ASm-FS-7cr"/>
+                                    <constraint firstAttribute="height" constant="46" id="iT3-ha-2xl"/>
+                                </constraints>
+                                <state key="normal" title="Settings" image="settings (1)"/>
+                                <connections>
+                                    <segue destination="n9z-Nd-2AE" kind="presentation" id="tGq-7H-eDq"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SkM-aQ-eFM" secondAttribute="bottom" constant="7" id="EDM-iu-Yd2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ykK-Kj-MBH" secondAttribute="bottom" constant="8" id="SCs-Qs-S5l"/>
+                            <constraint firstItem="ykK-Kj-MBH" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="U7n-JF-LVY"/>
+                            <constraint firstItem="SkM-aQ-eFM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="avt-hc-a7w"/>
+                            <constraint firstItem="1mP-Ok-J29" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fDY-iI-2YF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1mP-Ok-J29" secondAttribute="bottom" constant="100" id="o6R-1O-eYd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="goToSettingsBtn" destination="ykK-Kj-MBH" id="5Rj-wc-NTa"/>
+                        <outlet property="goToTaskListBtn" destination="SkM-aQ-eFM" id="ZGv-YI-tAc"/>
+                        <outlet property="settingsButtonConstraint" destination="U7n-JF-LVY" id="awj-jx-zyC"/>
+                        <outlet property="startButton" destination="1mP-Ok-J29" id="qwQ-fc-Gzd"/>
+                        <outlet property="startButtonConstraint" destination="fDY-iI-2YF" id="eHW-E0-UgX"/>
+                        <outlet property="taskButtonConstraint" destination="avt-hc-a7w" id="paK-AX-XOA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="RgO-BY-uTy">
+            <objects>
+                <viewController id="n9z-Nd-2AE" customClass="SettingsViewController" customModule="SwiftTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z8D-Yw-LaB"/>
+                        <viewControllerLayoutGuide type="bottom" id="w6i-4Q-MCw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fsS-le-yMT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="25" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gWE-Pn-D7b">
+                                <color key="backgroundColor" red="0.25098039220000001" green="0.80784313730000001" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ttw-6B-BQ9"/>
+                                    <constraint firstAttribute="width" constant="192" id="XaC-m2-zca"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tomato Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tZ-iy-3uA">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="192" id="fvw-3K-iCh"/>
+                                    <constraint firstAttribute="height" constant="47" id="hFc-yc-SRa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound Effects" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYs-WI-zOM">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="NW4-zI-3fo"/>
+                                    <constraint firstAttribute="height" constant="47" id="b2U-N6-h40"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sX-Qz-x7D" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.25098039215686274" green="0.80784313725490198" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="ef7-GR-lz0"/>
+                                    <constraint firstAttribute="height" constant="66" id="tAt-hq-BJu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
+                                <state key="normal" title="Turn Off"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="soundFXToggle:" destination="n9z-Nd-2AE" eventType="touchUpInside" id="fk5-zj-U72"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRv-VM-puI" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.25098039220000001" green="0.80784313730000001" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="AH7-Zi-Ljf"/>
+                                    <constraint firstAttribute="width" constant="94" id="h0y-Um-cld"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Set"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="workTimeBtnPressed:" destination="n9z-Nd-2AE" eventType="touchUpInside" id="6wu-l4-AaE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Break Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBY-zt-7ZX">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="9FS-fH-Ffn"/>
+                                    <constraint firstAttribute="width" constant="192" id="WxA-Nj-GrR"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="47" id="kNU-Xa-nB5"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="192" id="qx2-xb-qvS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nyc-Zh-odd">
+                                <color key="backgroundColor" red="0.25098039220000001" green="0.80784313730000001" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="IVY-DQ-k9i"/>
+                                    <constraint firstAttribute="width" constant="192" id="nsN-z0-9Ma"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCY-XH-5h1" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.25098039220000001" green="0.80784313730000001" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Cwu-j4-FVs"/>
+                                    <constraint firstAttribute="width" constant="94" id="cdH-u1-bfk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
+                                <state key="normal" title="Set"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="breakTimeBtnPressed:" destination="n9z-Nd-2AE" eventType="touchUpInside" id="io9-c4-tE1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5v-O6-DkG" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Hq5-fQ-5ab"/>
+                                    <constraint firstAttribute="width" constant="37" id="Yzn-bO-BFN"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="tomato-button"/>
+                                <connections>
+                                    <action selector="settingsDone:" destination="n9z-Nd-2AE" eventType="touchUpInside" id="BzL-BJ-Gf4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D61-XP-yms">
+                                <frame key="frameInset" minX="313" minY="629" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
+                                <state key="normal" title="i"/>
+                                <connections>
+                                    <segue destination="xnl-cp-OwX" kind="presentation" id="Ikf-fy-FuW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iBY-zt-7ZX" firstAttribute="top" secondItem="vRv-VM-puI" secondAttribute="bottom" constant="30" id="5sj-IO-4Ea"/>
+                            <constraint firstItem="nyc-Zh-odd" firstAttribute="centerX" secondItem="fsS-le-yMT" secondAttribute="centerX" id="A5H-Wm-E1x"/>
+                            <constraint firstItem="P5v-O6-DkG" firstAttribute="top" secondItem="Z8D-Yw-LaB" secondAttribute="bottom" constant="8" id="BSy-z2-DG8"/>
+                            <constraint firstItem="yYs-WI-zOM" firstAttribute="centerX" secondItem="fsS-le-yMT" secondAttribute="centerX" id="JVb-vk-mS5"/>
+                            <constraint firstItem="nyc-Zh-odd" firstAttribute="top" secondItem="iBY-zt-7ZX" secondAttribute="bottom" constant="30" id="NBS-rg-mN4"/>
+                            <constraint firstItem="gWE-Pn-D7b" firstAttribute="centerX" secondItem="fsS-le-yMT" secondAttribute="centerX" id="SIX-hF-mgU"/>
+                            <constraint firstItem="vRv-VM-puI" firstAttribute="top" secondItem="gWE-Pn-D7b" secondAttribute="bottom" constant="30" id="Sfb-qi-HHr"/>
+                            <constraint firstItem="vRv-VM-puI" firstAttribute="centerX" secondItem="fsS-le-yMT" secondAttribute="centerX" id="VAZ-L0-b6D"/>
+                            <constraint firstItem="8sX-Qz-x7D" firstAttribute="centerX" secondItem="fsS-le-yMT" secondAttribute="centerX" id="W3C-ii-25g"/>
+                            <constraint firstItem="UCY-XH-5h1" firstAttribute="top" secondItem="nyc-Zh-odd" secondAttribute="bottom" constant="30" id="Xrp-n8-5rv"/>
+                            <constraint firstItem="iBY-zt-7ZX" firstAttribute="centerX" secondItem="fsS-le-yMT" secondAttribute="centerX" id="a2k-xH-F3e"/>
+                            <constraint firstItem="P5v-O6-DkG" firstAttribute="leading" secondItem="fsS-le-yMT" secondAttribute="leadingMargin" id="eNL-vl-fJY"/>
+                            <constraint firstItem="8sX-Qz-x7D" firstAttribute="top" secondItem="yYs-WI-zOM" secondAttribute="bottom" constant="30" id="eVd-XB-dbc"/>
+                            <constraint firstItem="gWE-Pn-D7b" firstAttribute="top" secondItem="6tZ-iy-3uA" secondAttribute="bottom" constant="30" id="nEs-2g-PRV"/>
+                            <constraint firstItem="6tZ-iy-3uA" firstAttribute="centerX" secondItem="fsS-le-yMT" secondAttribute="centerX" id="p3L-nR-b2Q"/>
+                            <constraint firstItem="iBY-zt-7ZX" firstAttribute="top" secondItem="vRv-VM-puI" secondAttribute="bottom" constant="30" id="pop-Fz-wGk"/>
+                            <constraint firstItem="yYs-WI-zOM" firstAttribute="top" secondItem="UCY-XH-5h1" secondAttribute="bottom" constant="30" id="q5o-pf-ao1"/>
+                            <constraint firstItem="UCY-XH-5h1" firstAttribute="centerX" secondItem="fsS-le-yMT" secondAttribute="centerX" id="seO-QN-sYH"/>
+                            <constraint firstItem="6tZ-iy-3uA" firstAttribute="top" secondItem="Z8D-Yw-LaB" secondAttribute="bottom" constant="50" id="xZW-Bm-mNS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="breakTimeLabel" destination="nyc-Zh-odd" id="btz-37-MHS"/>
+                        <outlet property="setBreakTimeBtn" destination="UCY-XH-5h1" id="IbZ-TM-vtD"/>
+                        <outlet property="setWorkTimeBtn" destination="vRv-VM-puI" id="NsI-41-2gb"/>
+                        <outlet property="soundFXBtn" destination="8sX-Qz-x7D" id="J2G-5Y-sLN"/>
+                        <outlet property="workTimeLabel" destination="gWE-Pn-D7b" id="SqJ-tr-Eiv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gau-wx-M1s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2697" y="-644"/>
+        </scene>
+        <!--Attributes View Controller-->
+        <scene sceneID="QbM-0n-3v7">
+            <objects>
+                <viewController id="xnl-cp-OwX" customClass="AttributesViewController" customModule="SwiftTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YKQ-By-4iL"/>
+                        <viewControllerLayoutGuide type="bottom" id="1zp-eQ-KTh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FgY-9S-vBr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tomato image by Freepik" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAf-Y6-cCv">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="4i2-28-uXQ"/>
+                                    <constraint firstAttribute="width" constant="286" id="phn-bp-cHH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vem-HP-Nt0" customClass="Attri">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="204" id="cIu-i6-b8k"/>
+                                </constraints>
+                                <string key="text">To use: Press the tomato to start a work session. Focus on one task until the timer beeps, then record a note about what you accomplished. Then take a well-earned break. You can adjust work and break times in settings, or turn off sounds. </string>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icons by Gregor Cesnar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Grc-at-MNJ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="YuO-SX-0eq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1XN-rk-q4u" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="09O-21-JpV"/>
+                                    <constraint firstAttribute="width" constant="46" id="Zvu-qW-O82"/>
+                                </constraints>
+                                <state key="normal" title="Settings" image="settings (1)"/>
+                                <connections>
+                                    <action selector="attributesDone:" destination="xnl-cp-OwX" eventType="touchUpInside" id="OjD-wL-ZjM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vem-HP-Nt0" firstAttribute="centerX" secondItem="Grc-at-MNJ" secondAttribute="centerX" id="03t-7D-vTh"/>
+                            <constraint firstItem="Vem-HP-Nt0" firstAttribute="leading" secondItem="FgY-9S-vBr" secondAttribute="leadingMargin" constant="28" id="Iei-i7-tda"/>
+                            <constraint firstItem="Vem-HP-Nt0" firstAttribute="leading" secondItem="hAf-Y6-cCv" secondAttribute="leading" id="PYe-Mc-8mJ"/>
+                            <constraint firstItem="1zp-eQ-KTh" firstAttribute="top" secondItem="hAf-Y6-cCv" secondAttribute="bottom" constant="62" id="R2U-lY-w3D"/>
+                            <constraint firstItem="1XN-rk-q4u" firstAttribute="top" secondItem="YKQ-By-4iL" secondAttribute="bottom" constant="8" symbolic="YES" id="RA2-Wg-Jxu"/>
+                            <constraint firstItem="Vem-HP-Nt0" firstAttribute="centerX" secondItem="hAf-Y6-cCv" secondAttribute="centerX" id="RHc-v2-nSJ"/>
+                            <constraint firstItem="Vem-HP-Nt0" firstAttribute="top" secondItem="1XN-rk-q4u" secondAttribute="bottom" constant="60" id="XF9-YL-yyH"/>
+                            <constraint firstItem="hAf-Y6-cCv" firstAttribute="top" secondItem="Grc-at-MNJ" secondAttribute="bottom" constant="21" id="mSM-3d-Qeb"/>
+                            <constraint firstItem="1XN-rk-q4u" firstAttribute="leading" secondItem="FgY-9S-vBr" secondAttribute="leadingMargin" id="r75-CN-XWe"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HTa-RV-Tza" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3389.5999999999999" y="-646.32683658170924"/>
+        </scene>
+        <!--Task List Table View Controller-->
+        <scene sceneID="xY5-lC-Eni">
+            <objects>
+                <viewController id="AA8-Fw-f6s" customClass="TaskListTableViewController" customModule="SwiftTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ARn-wu-pyf"/>
+                        <viewControllerLayoutGuide type="bottom" id="gft-Tb-OZm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EbS-lK-90Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3nb-VO-TYi">
+                                <frame key="frameInset" minY="72" width="375" height="595"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="MJF-2O-QkV">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MJF-2O-QkV" id="7Fb-8z-aYq">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="wCT-tv-Z91" kind="show" identifier="segueToDetailVC" id="W4W-AU-fbk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="AA8-Fw-f6s" id="yxc-Hc-273"/>
+                                    <outlet property="delegate" destination="AA8-Fw-f6s" id="J1p-wU-mRE"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1T-9t-cwC" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="O21-MU-NPc"/>
+                                    <constraint firstAttribute="width" constant="37" id="kR1-52-xU0"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="tomato-button"/>
+                                <connections>
+                                    <action selector="tasksDone:" destination="AA8-Fw-f6s" eventType="touchUpInside" id="JwC-3j-Iwp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b1T-9t-cwC" firstAttribute="leading" secondItem="EbS-lK-90Z" secondAttribute="leadingMargin" id="7dl-1G-70x"/>
+                            <constraint firstItem="b1T-9t-cwC" firstAttribute="top" secondItem="ARn-wu-pyf" secondAttribute="bottom" constant="8" id="gsY-j9-A8i"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="table" destination="3nb-VO-TYi" id="fDW-dO-6sZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZJt-Ci-rnE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="895" y="-643"/>
+        </scene>
+        <!--Task Detail View Controller-->
+        <scene sceneID="KxM-PZ-pkO">
+            <objects>
+                <viewController id="wCT-tv-Z91" customClass="TaskDetailViewController" customModule="SwiftTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vra-Y2-zZp"/>
+                        <viewControllerLayoutGuide type="bottom" id="JYa-8r-oOh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="htw-Li-Sgn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpP-Yc-IP0" customClass="RoundLabel" customModule="SwiftTime" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="nkO-mL-Wox"/>
+                                    <constraint firstAttribute="width" constant="240" id="uV2-3m-JAt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AkS-rp-SJF" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="mYn-Kq-Ibd"/>
+                                    <constraint firstAttribute="width" constant="37" id="zQZ-Ki-guQ"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="tomato-button"/>
+                                <connections>
+                                    <action selector="detailDone:" destination="wCT-tv-Z91" eventType="touchUpInside" id="lph-wO-cgw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSg-Jp-mfC" customClass="RoundLabel" customModule="SwiftTime" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.0" green="0.72549019609999998" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="193" id="Ihw-l2-nck"/>
+                                    <constraint firstAttribute="width" constant="240" id="kib-CT-QyS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="inset">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AkS-rp-SJF" firstAttribute="leading" secondItem="htw-Li-Sgn" secondAttribute="leadingMargin" id="QqA-ZL-mHC"/>
+                            <constraint firstItem="oSg-Jp-mfC" firstAttribute="top" secondItem="lpP-Yc-IP0" secondAttribute="bottom" constant="22" id="iwB-J8-48k"/>
+                            <constraint firstItem="AkS-rp-SJF" firstAttribute="top" secondItem="htw-Li-Sgn" secondAttribute="topMargin" constant="28" id="wQw-vb-C1r"/>
+                            <constraint firstItem="lpP-Yc-IP0" firstAttribute="centerX" secondItem="htw-Li-Sgn" secondAttribute="centerX" id="wq8-wx-HXg"/>
+                            <constraint firstItem="oSg-Jp-mfC" firstAttribute="centerX" secondItem="htw-Li-Sgn" secondAttribute="centerX" id="xTK-tl-iDr"/>
+                            <constraint firstItem="lpP-Yc-IP0" firstAttribute="top" secondItem="Vra-Y2-zZp" secondAttribute="bottom" constant="139" id="ycl-d8-093"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textOfLabel" destination="lpP-Yc-IP0" id="AV5-IC-ft2"/>
+                        <outlet property="textOfTaskLabel" destination="oSg-Jp-mfC" id="HDk-qZ-T08"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kdv-Qg-UjS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1760.8" y="-644.52773613193403"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="notepad" width="512" height="512"/>
+        <image name="settings (1)" width="512" height="512"/>
+        <image name="tomato-button" width="345" height="342"/>
+    </resources>
 </document>
