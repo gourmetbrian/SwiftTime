@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,17 +23,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mP-Ok-J29" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
+                                <rect key="frame" x="112.5" y="418" width="150" height="149"/>
                                 <color key="backgroundColor" red="1" green="0.59576851487178895" blue="0.5284846064654336" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="149" id="IF0-i6-fae"/>
                                     <constraint firstAttribute="width" constant="150" id="YIe-4k-qAW"/>
                                 </constraints>
-                                <state key="normal" title="Start Tomato" image="tomato-button"/>
+                                <state key="normal" title="Start Tomato" image="apple"/>
                                 <connections>
                                     <action selector="startTomatoPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eI0-eR-Keo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SkM-aQ-eFM" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
+                                <rect key="frame" x="16" y="613" width="47" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="QF2-li-bp9"/>
                                     <constraint firstAttribute="width" constant="47" id="W5f-jO-akf"/>
@@ -41,6 +46,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykK-Kj-MBH" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
+                                <rect key="frame" x="313" y="613" width="46" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="ASm-FS-7cr"/>
                                     <constraint firstAttribute="height" constant="46" id="iT3-ha-2xl"/>
@@ -87,6 +93,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="25" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gWE-Pn-D7b">
+                                <rect key="frame" x="91.5" y="147" width="192" height="30"/>
                                 <color key="backgroundColor" red="0.25098039220000001" green="0.80784313730000001" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -97,7 +104,8 @@
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tomato Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tZ-iy-3uA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tZ-iy-3uA">
+                                <rect key="frame" x="91.5" y="70" width="192" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="192" id="fvw-3K-iCh"/>
                                     <constraint firstAttribute="height" constant="47" id="hFc-yc-SRa"/>
@@ -107,6 +115,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound Effects" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYs-WI-zOM">
+                                <rect key="frame" x="77.5" y="494" width="220" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="220" id="NW4-zI-3fo"/>
                                     <constraint firstAttribute="height" constant="47" id="b2U-N6-h40"/>
@@ -116,6 +125,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sX-Qz-x7D" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
+                                <rect key="frame" x="140" y="571" width="95" height="66"/>
                                 <color key="backgroundColor" red="0.25098039215686274" green="0.80784313725490198" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="95" id="ef7-GR-lz0"/>
@@ -133,6 +143,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRv-VM-puI" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
+                                <rect key="frame" x="140.5" y="207" width="94" height="45"/>
                                 <color key="backgroundColor" red="0.25098039220000001" green="0.80784313730000001" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="AH7-Zi-Ljf"/>
@@ -150,6 +161,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Break Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBY-zt-7ZX">
+                                <rect key="frame" x="91.5" y="282" width="192" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="9FS-fH-Ffn"/>
                                     <constraint firstAttribute="width" constant="192" id="WxA-Nj-GrR"/>
@@ -161,6 +173,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nyc-Zh-odd">
+                                <rect key="frame" x="91.5" y="359" width="192" height="30"/>
                                 <color key="backgroundColor" red="0.25098039220000001" green="0.80784313730000001" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -172,6 +185,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCY-XH-5h1" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
+                                <rect key="frame" x="140.5" y="419" width="94" height="45"/>
                                 <color key="backgroundColor" red="0.25098039220000001" green="0.80784313730000001" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Cwu-j4-FVs"/>
@@ -189,17 +203,18 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5v-O6-DkG" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
+                                <rect key="frame" x="16" y="28" width="37" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="Hq5-fQ-5ab"/>
                                     <constraint firstAttribute="width" constant="37" id="Yzn-bO-BFN"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="tomato-button"/>
+                                <state key="normal" backgroundImage="apple"/>
                                 <connections>
                                     <action selector="settingsDone:" destination="n9z-Nd-2AE" eventType="touchUpInside" id="BzL-BJ-Gf4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D61-XP-yms">
-                                <frame key="frameInset" minX="313" minY="629" width="46" height="30"/>
+                                <rect key="frame" x="313" y="629" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
                                 <state key="normal" title="i"/>
@@ -255,7 +270,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tomato image by Freepik" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAf-Y6-cCv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple image by Freepik" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAf-Y6-cCv">
+                                <rect key="frame" x="44" y="584" width="286" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="4i2-28-uXQ"/>
                                     <constraint firstAttribute="width" constant="286" id="phn-bp-cHH"/>
@@ -265,15 +281,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vem-HP-Nt0" customClass="Attri">
+                                <rect key="frame" x="44" y="134" width="286" height="204"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="204" id="cIu-i6-b8k"/>
                                 </constraints>
-                                <string key="text">To use: Press the tomato to start a work session. Focus on one task until the timer beeps, then record a note about what you accomplished. Then take a well-earned break. You can adjust work and break times in settings, or turn off sounds. </string>
+                                <string key="text">To use: Press the apple to start a work session. Focus on one task until the timer beeps, then record a note about what you accomplished. Then take a well-earned break. You can adjust work and break times in settings, or turn off sounds. </string>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icons by Gregor Cesnar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Grc-at-MNJ">
+                                <rect key="frame" x="97.5" y="537" width="179" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="YuO-SX-0eq"/>
                                 </constraints>
@@ -282,6 +300,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1XN-rk-q4u" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
+                                <rect key="frame" x="16" y="28" width="46" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="09O-21-JpV"/>
                                     <constraint firstAttribute="width" constant="46" id="Zvu-qW-O82"/>
@@ -323,7 +342,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3nb-VO-TYi">
-                                <frame key="frameInset" minY="72" width="375" height="595"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="595"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -331,7 +350,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MJF-2O-QkV" id="7Fb-8z-aYq">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
@@ -345,11 +364,12 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1T-9t-cwC" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
+                                <rect key="frame" x="16" y="28" width="37" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="O21-MU-NPc"/>
                                     <constraint firstAttribute="width" constant="37" id="kR1-52-xU0"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="tomato-button"/>
+                                <state key="normal" backgroundImage="apple"/>
                                 <connections>
                                     <action selector="tasksDone:" destination="AA8-Fw-f6s" eventType="touchUpInside" id="JwC-3j-Iwp"/>
                                 </connections>
@@ -382,6 +402,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpP-Yc-IP0" customClass="RoundLabel" customModule="SwiftTime" customModuleProvider="target">
+                                <rect key="frame" x="67.5" y="159" width="240" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="nkO-mL-Wox"/>
                                     <constraint firstAttribute="width" constant="240" id="uV2-3m-JAt"/>
@@ -402,16 +423,18 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AkS-rp-SJF" customClass="CustomButton" customModule="SwiftTime" customModuleProvider="target">
+                                <rect key="frame" x="16" y="28" width="37" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="mYn-Kq-Ibd"/>
                                     <constraint firstAttribute="width" constant="37" id="zQZ-Ki-guQ"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="tomato-button"/>
+                                <state key="normal" backgroundImage="apple"/>
                                 <connections>
                                     <action selector="detailDone:" destination="wCT-tv-Z91" eventType="touchUpInside" id="lph-wO-cgw"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSg-Jp-mfC" customClass="RoundLabel" customModule="SwiftTime" customModuleProvider="target">
+                                <rect key="frame" x="67.5" y="215" width="240" height="193"/>
                                 <color key="backgroundColor" red="0.0" green="0.72549019609999998" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="193" id="Ihw-l2-nck"/>
@@ -451,8 +474,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="apple" width="373" height="429"/>
         <image name="notepad" width="512" height="512"/>
         <image name="settings (1)" width="512" height="512"/>
-        <image name="tomato-button" width="345" height="342"/>
     </resources>
 </document>

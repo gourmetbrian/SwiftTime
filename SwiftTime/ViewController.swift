@@ -118,7 +118,9 @@ class ViewController: UIViewController {
         remainingTicks -= 1
         updateDisplay()
         
-        startButton.scaleAnimation()
+        DispatchQueue.main.async {
+            self.startButton.scaleAnimation()
+        }
         if (AppDelegate().sharedInstance().settings.tickSoundOn == true) {
         playMyFile(fileToPlay: tickPath)
         }
