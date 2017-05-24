@@ -44,8 +44,6 @@ class CustomButton: UIButton {
     
     func setupView()
     {
-        self.layer.cornerRadius = cornerRadius
-        
         self.addTarget(self, action: #selector(CustomButton.scaleToSmall), for: .touchDown)
         self.addTarget(self, action: #selector(CustomButton.scaleToSmall), for: .touchDragEnter)
         self.addTarget(self, action: #selector(CustomButton.scaleAnimation), for: .touchUpInside)

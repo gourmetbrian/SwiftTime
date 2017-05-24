@@ -82,7 +82,7 @@ class ViewController: UIViewController {
     @IBAction func startTomatoPressed(_ sender: AnyObject)
     {
         if (currentState == .STOPPED ) {
-        remainingTicks = 1 //AppDelegate().sharedInstance().settings.userWorkTime
+        remainingTicks = AppDelegate().sharedInstance().settings.userWorkTime
         currentState = .RUNNING_TOMATO
         self.goToSettingsBtn.isEnabled = false
         self.goToSettingsBtn.alpha = 0.4
