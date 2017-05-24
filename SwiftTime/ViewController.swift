@@ -82,7 +82,7 @@ class ViewController: UIViewController {
     @IBAction func startTomatoPressed(_ sender: AnyObject)
     {
         if (currentState == .STOPPED ) {
-        remainingTicks = AppDelegate().sharedInstance().settings.userWorkTime
+        remainingTicks = 1 //AppDelegate().sharedInstance().settings.userWorkTime
         currentState = .RUNNING_TOMATO
         self.goToSettingsBtn.isEnabled = false
         self.goToSettingsBtn.alpha = 0.4
@@ -118,7 +118,9 @@ class ViewController: UIViewController {
         remainingTicks -= 1
         updateDisplay()
         
-        startButton.scaleAnimation()
+        DispatchQueue.main.async {
+            self.startButton.scaleAnimation()
+        }
         if (AppDelegate().sharedInstance().settings.tickSoundOn == true) {
         playMyFile(fileToPlay: tickPath)
         }
